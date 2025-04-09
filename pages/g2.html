@@ -1,260 +1,548 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WPH7NCG4');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE360M0YP"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-SHE360M0YP');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SHE360M0YP');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6640595376330309"
-         crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
+
+
+
     <title>PeteZah | Games</title>
     <link rel="icon" type="icon/x-icon" href="/storage/images/logo-png-removebg-preview.png" />
+    <link rel="stylesheet" type="text/css" href="/storage/css/themes2.css">
+
+
     <meta name="description" content="Pete Zah, game on" />
     <meta name="keywords" content="Proxy, Unblocker, Pete Zah Unblocker, Pete Zah Games, Pete Zah" />
     <style>
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #0A1D37;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    overflow: auto;
-}
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0A1D37;
+            /* Dark Blue background */
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            padding: 0;
+            overflow: auto;
+            /* Enable scrolling */
+        }
 
-body::-webkit-scrollbar {
-    display: none;
-}
+        /* Hide scrollbar but allow scrolling */
+        body::-webkit-scrollbar {
+            display: none;
+            /* Hide scrollbar */
+        }
 
-.god-rays {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 550px;
-    --stripes: repeating-linear-gradient( 100deg, rgba(20, 40, 60, 0.8) 0%, rgba(20, 40, 60, 0.8) 7%, transparent 10%, transparent 12%, rgba(20, 40, 60, 0.8) 16% );
-    --rays: repeating-linear-gradient( 100deg, rgba(30, 50, 90, 0.9) 10%, rgba(20, 40, 80, 0.9) 15%, rgba(30, 50, 90, 0.9) 20%, rgba(20, 40, 80, 0.9) 25%, rgba(30, 50, 90, 0.9) 30% );
-    background-image: var(--stripes), var(--rays);
-    background-size: 300%, 200%;
-    background-position: 50% 50%, 50% 50%;
-    animation: fadeIn 2s ease;
-    mask-image: radial-gradient(ellipse at 100% 0%, rgba(255, 255, 255, 0) 40%, transparent 70%);
-    -webkit-mask-image: radial-gradient(ellipse at 100% 0%, white 40%, transparent 70%);
-    pointer-events: none;
-    z-index: -1;
-}
+        .god-rays {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 550px;
+            --stripes: repeating-linear-gradient(100deg, rgba(20, 40, 60, 0.8) 0%, rgba(20, 40, 60, 0.8) 7%, transparent 10%, transparent 12%, rgba(20, 40, 60, 0.8) 16%);
+            --rays: repeating-linear-gradient(100deg, rgba(30, 50, 90, 0.9) 10%, rgba(20, 40, 80, 0.9) 15%, rgba(30, 50, 90, 0.9) 20%, rgba(20, 40, 80, 0.9) 25%, rgba(30, 50, 90, 0.9) 30%);
+            background-image: var(--stripes), var(--rays);
+            background-size: 300%, 200%;
+            background-position: 50% 50%, 50% 50%;
+            animation: fadeIn 2s ease;
+            mask-image: radial-gradient(ellipse at 100% 0%, rgba(255, 255, 255, 0) 40%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at 100% 0%, white 40%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
 
-.god-rays::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: var(--stripes), var(--rays);
-    background-size: 200%, 100%;
-    animation: god-rays 40s linear infinite;
-    background-attachment: fixed;
-    mix-blend-mode: difference;
-}
+        .god-rays::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: var(--stripes), var(--rays);
+            background-size: 200%, 100%;
+            animation: god-rays 40s linear infinite;
+            background-attachment: fixed;
+            mix-blend-mode: difference;
+        }
 
-.search-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #0A1D37;
-    padding: 15px 0;
-    text-align: center;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
+        /* Fixed Search Bar */
+        .search-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0A1D37;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
 
-.search-container input {
-    font-family: "Nunito", serif;
-    width: 40vw;
-    padding: 12px 20px;
-    font-size: 18px;
-    border: 2px solid #fff;
-    color: #fff;
-    background: #141414;
-    border-radius: 50px;
-    transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+        /* Search Bar Input */
+        .search-container input {
+            font-family: "Poppins", sans-serif;
+            width: 50vw; /* Increased width for better usability */
+            padding: 12px 20px;
+            font-size: 18px;
+            border: 2px solid #fff;
+            color: #fff;
+            background: #141414;
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
 
-.search-container input:focus {
-    background: #333;
-    outline: none;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-    border-color: #0066cc;
-}
+        .search-container input:focus {
+            background: #333;
+            outline: none;
+            box-shadow: 0 0 15px rgba(0, 102, 204, 0.4); /* Updated focus shadow */
+            border-color: #0066cc; /* Light blue focus border */
+        }
 
-.pinned-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 100px 0 30px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-bottom: 2px solid #fff;
-}
+        /* Game Container */
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px; /* Increased gap for better spacing */
+            padding-top: 120px; /* Space for fixed search bar */
+            padding-bottom: 30px; /* Bottom padding for smoother look */
+        }
 
-.game-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
+        /* Image Item Styles */
+        .image-item {
+            position: relative;
+            width: 250px; /* Consistent width */
+            height: 220px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+            border-radius: 10px;
+            background-color: #222;
+            border: 2px solid #fff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        }
 
-.image-item {
-    position: relative;
-    width: 250px;
-    height: 220px;
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    background-color: #222;
-    border: 2px solid #fff;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
-}
+        .image-item:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+        }
 
-.image-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-}
+        .image-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+            border-radius: 10px;
+        }
 
-.image-item a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: inherit;
-    border-radius: 10px;
-}
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            /* Matching rounded corners */
+        }
 
-.image-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
+        .image-item img:hover {
+            transform: scale(1.1);
+            /* Slight zoom effect on image hover */
+        }
 
-.image-item img:hover {
-    transform: scale(1.1);
-}
+        /* Label Styles */
+        .label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Smooth transition for label */
+        }
 
-.label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-weight: bold;
-    font-size: 16px;
-}
+        .image-item:hover .label {
+            background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+        }
 
-.image-item:hover .label {
-    background-color: rgba(0, 0, 0, 0.8);
-}
+        /* General Layout & Spacing */
+        .game-container {
+            gap: 30px;
+            /* More space between image items */
+        }
 
-.heart-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    transition: color 0.3s ease;
-    z-index: 10;
-}
+        .appImage {
+            opacity: 0;
+            animation: fade-in-bottom 1s;
+        }
 
-.heart-btn:hover {
-    color: red;
-}
+        .appsContainer {
+            top: 65px;
+            position: absolute;
+            width: 1070px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: flex-start;
+        }
 
-.heart-btn.favorited {
-    color: red;
-}
+        .appsContainer img {
+            width: 198px;
+            height: 128px;
+            object-fit: cover;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: 0.2s ease-in-out !important;
+        }
 
-.randomBtn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
-    padding: 10px 20px;
-    background-color: #141414;
-    color: white;
-    border: 1px solid white;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-}
+        .appsContainer img:hover {
+            transform: scale(1.05);
+            transition: 0.2s ease-in-out !important;
+        }
 
-.randomBtn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-}
+        .appsContainer img:active {
+            transition: 0s;
+            outline: 2px solid var(--image-outline-color);
+        }
 
-.filter-container {
-    position: fixed;
-    top: 5px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #141414;
-    padding: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
+        .gameImage {
+            opacity: 0;
+            animation: fade-in-bottom 1s;
+        }
 
-.filter-container select {
-    background-color: #222;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 2px solid #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        .appsContainer {
+            opacity: 1;
+        }
 
-.filter-container select:hover {
-    background-color: #333;
-}
+        .gameContain {
+            top: 65px;
+            position: absolute;
+            width: 1070px;
+            display: inline-flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: flex-start;
+        }
 
-.ad-container-horizantal {
-    width: 100%;
-    height: 200px;
-    border: 3px solid red;
-    background-color: #000e24;
-    z-index: -2;
-}
+        .gameContain img {
+            width: 198px;
+            height: 128px;
+            object-fit: cover;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: 0.2s ease-in-out !important;
+        }
+
+        .gameContain img:hover {
+            transform: scale(1.05);
+            transition: 0.2s ease-in-out !important;
+        }
+
+        .gameContain img:active {
+            transition: 0s;
+            outline: 2px solid var(--image-outline-color);
+        }
+
+        .scrolltop {
+            background-color: var(--scrolltop-background-color);
+            backdrop-filter: var(--scrolltop-backdrop-filter);
+            width: 49px;
+            height: 49px;
+            border-radius: 50%;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 9999;
+            transition: 0.3s ease-in-out all;
+            opacity: 0;
+        }
+
+        .scrolltop:hover {
+            transform: scale(1.1);
+        }
+
+        .scrolltop span.material-symbols-outlined {
+            justify-content: center;
+            transform: translateY(-10px);
+            font-size: 30px;
+        }
+
+        .gameSearchInput,
+        .appsSearchInput,
+        #gointospace {
+            padding-left: 40px;
+        }
+
+        .search-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            border-radius: 30px;
+        }
+
+        .search-header__input {
+            font-family: 'DM Sans';
+            font-size: 16px;
+            background-color: var(--input-background-color);
+            border: solid 0.5px var(--border-color);
+            color: var(--text-color);
+            padding: 0.7rem 1rem;
+            border-radius: 25px;
+            width: 240px;
+            height: 20px;
+            transition: all ease-in-out 0.5s;
+            margin-right: -2rem;
+            opacity: 1;
+            text-align: center;
+        }
+
+        .search-header__input:not(#gointospace2):hover,
+        .search-header__input:not(#gointospace2):focus {
+            box-shadow:
+                10px 5px 40px -10px var(--dshadow1),
+                -14px -4px 40px -10px var(--dshadow2);
+            padding-left: calc(+50px) !important;
+            padding-right: calc(+50px) !important;
+        }
+
+        .search-header__input:focus {
+            outline: none;
+            background-color: #0a0a0af0;
+        }
+
+        .search-header__input::-webkit-input-placeholder {
+            font-weight: 200;
+            color: #868686;
+            font-family: 'DM Sans';
+        }
+
+        .search-header__input:focus+.search-header__button {
+            background-color: transparent;
+        }
+
+        .search-header__button {
+            border: none;
+            background-color: transparent;
+            margin-top: 0.1em;
+        }
+
+        .search-header__button:hover {
+            cursor: pointer;
+        }
+
+        .search-header__icon {
+            height: 1.3em;
+            width: 1.3em;
+            fill: #3a3a3a;
+        }
+
+        .searchEngineIcon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: relative;
+            z-index: 9999999;
+            margin-right: -35px;
+        }
+
+        .image-item {
+            position: relative;
+            width: 200px;
+            height: 170px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border-radius: 10px;
+            animation: slideInFromLeft 0.5s ease-out forwards;
+        }
+
+        .image-item:hover {
+            transform: scale(1.1);
+        }
+
+        .image-item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 5px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .randomGameOpensBtn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 9999;
+            padding: 10px 20px;
+            background-color: #141414;
+            color: white;
+            border: 1px solid white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+        }
+
+        .randomGameOpensBtn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Filter Dropdown Styles */
+        .filter-container {
+            position: fixed;
+            top: 5px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #141414;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .filter-container select {
+            background-color: #222;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filter-container select:hover {
+            background-color: #333;
+        }
+
+        .ad-container-horizantal {
+            width: 100%;
+            height: 200px;
+            border: 3px solid red;
+            background-color: #000e24;
+            z-index: -2;
+        }
+        .heart-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: red;
+            transition: color 0.3s;
+        }
+
+        .heart-button:hover {
+            color: white;
+        }
+
+        .pinned-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+            background-color: #141414;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: 90%;
+            justify-content: left;
+            position: relative;
+            z-index: 100;
+        }
+
+        .pinned-item {
+            position: relative;
+            width: 100px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pinned-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pinned-item .remove-pin {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 2px 5px;
+            border-radius: 0 5px 0 0;
+            cursor: pointer;
+            font-size: 14px;
+        }
     </style>
 </head>
+
 <body>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPH7NCG4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <div class="god-rays"></div>
-    <button class="randomBtn" onclick="randomGame()">Random Game</button>
+
+    <button class="randomGameOpensBtn" onclick="randomGameOpen()">Random Game</button>
+
     <div class="search-container">
         <input type="text" id="search-games" placeholder="Search for YOUR Favorite Game....." onkeyup="filterItems()">
     </div>
+
     <div class="filter-container">
         <select id="gameFilter" onchange="filterByCategory()">
             <option value="">Filter by Category</option>
@@ -268,1098 +556,131 @@ body::-webkit-scrollbar {
             <option value="io">Io</option>
         </select>
     </div>
-    <div class="pinned-container" id="pinnedContainer"></div>
+
+    <div class="pinned-container" id="pinnedContainer" style="display: none;"></div>
+
     <div class="game-container" id="imageContainer">
-        <div class="image-item" data-label="request games">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFcrjRodnn92yuBUtw2czQyoN4L8UpnUsJVDnVO5QT5xZNcQ/viewform?usp=sf_link">
-                <img src="/storage/images/main/googleforms.jpg">
-                <div class="label">Request Games</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="1v1.lol">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/1v1lol/">
-                <img src="/storage/ag/g/1v1lol/splash.png">
-                <div class="label">1v1.LOL</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="2 player" data-label="tag">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/tag">
-                <img src="/storage/images/main/taggame.jpg">
-                <div class="label">Tag</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="racing" data-label="poly track">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/polytrack/">
-                <img src="/storage/ag/g/polytrack/splash.png">
-                <div class="label">Poly Track</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="n-gon">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/n-gon">
-                <img src="/storage/images/main/ngon.jpg">
-                <div class="label">N-gon</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="2 player" data-category="skill" data-label="ragdoll archers">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/ragdoll-archers">
-                <img src="/storage/images/main/ragdoll.jpg">
-                <div class="label">Ragdoll Archers</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="2 player" data-category="skill" data-label="ragdoll hit">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/ragdoll-hit">
-                <img src="/storage/images/main/ragdoll-hit.jpeg">
-                <div class="label">Ragdoll Hit</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="fortnite">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/fortnight">
-                <img src="/storage/images/main/fakefortnight.jpg">
-                <div class="label">Fortnite</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="smashy roads">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/smashyroad">
-                <img src="/storage/images/main/smashy.jpg">
-                <div class="label">Smashy Roads</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="smashy roads 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/smashy-roads-2">
-                <img src="/storage/images/main/smashyroad.webp">
-                <div class="label">Smashy Roads 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="stickman hook">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/stickman-hook">
-                <img src="/storage/images/main/stickmanhook.jpg">
-                <div class="label">Stickman Hook</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="stick slasher">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/stickslasher">
-                <img src="/storage/images/main/stickslasher.jpg">
-                <div class="label">Stick Slasher</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="gladihoppers">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/gladi">
-                <img src="/storage/images/main/gladi.jpg">
-                <div class="label">Gladihoppers</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="table tennis">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/tabletennis">
-                <img src="/storage/images/main/tabletennis.jpg">
-                <div class="label">Table Tennis</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="rip-off-brawl-stars">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/brawlstars">
-                <img src="/storage/images/main/brawlstars1.jpg">
-                <div class="label">Rip-Off Brawl Stars</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="rip-off-brawl-stars">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=https://foodstars.io">
-                <img src="/storage/images/main/brawlstars1.jpg">
-                <div class="label">Rip-Off Brawl Stars Method 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="bowmasters">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/bowmasters/">
-                <img src="/storage/images/main/bowmasters.jpeg">
-                <div class="label">Bowmasters</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-category="strategy" data-label="super auto pets">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/superautopets">
-                <img src="/storage/images/main/superpets.jpg">
-                <div class="label">Super Auto Pets</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="resent client">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/ResentCli">
-                <img src="/storage/images/main/resent.jpeg">
-                <div class="label">Resent Client</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="racing" data-category="action" data-label="race survival car">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/racesurvival">
-                <img src="/storage/ag/g/racesurvival/logo.jpeg">
-                <div class="label">Race Survival</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="call of duty">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/callofduty">
-                <img src="/storage/images/main/callme.jpg">
-                <div class="label">Call of Duty</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="territorialio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/territorial">
-                <img src="/storage/images/main/territorialio.jpg">
-                <div class="label">Territorial.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="slitherio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/slither">
-                <img src="/storage/images/main/slitherio.jpg">
-                <div class="label">Slither.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="agario">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/agar">
-                <img src="/storage/images/main/agario.jpg">
-                <div class="label">Agar.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="kouio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/kour">
-                <img src="/storage/images/main/kour.jpg">
-                <div class="label">Kour.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="minibloxio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/miniblox">
-                <img src="/storage/images/main/miniblox.jpg">
-                <div class="label">Miniblox.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="yohohoio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/yohoho/">
-                <img src="/storage/ag/g/yohoho/IMG_5302.jpeg">
-                <div class="label">Yohoho.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="holeio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/holeio/">
-                <img src="/storage/images/main/hole.jpg">
-                <div class="label">Hole.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="skribblio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/skribbl/">
-                <img src="/storage/ag/g/skribbl/IMG_5303.jpeg">
-                <div class="label">Skribbl.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="smash karts io">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/smashkarts/index.html">
-                <img src="/storage/ag/g/smashkarts/smashkarts.webp">
-                <div class="label">Smash Karts.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="arrasio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/arras">
-                <img src="/storage/images/main/arras.jpg">
-                <div class="label">Arras.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="hexanautio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/hexa">
-                <img src="/storage/images/main/hexa.jpg">
-                <div class="label">Hexanaut.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="dieeeepio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/dieeeeeep">
-                <img src="/storage/images/main/dieeeep.jpg">
-                <div class="label">Deeeep.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="paperio">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/paperio">
-                <img src="/storage/images/main/paper.jpg">
-                <div class="label">Paper.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="paperio 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/paperio2">
-                <img src="/storage/images/main/paper2.jpg">
-                <div class="label">Paper.io 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="stumble guys">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/stumbleguys">
-                <img src="/storage/images/main/stumble.jpg">
-                <div class="label">Stumble Guys</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="space huggers">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/spacehuggers">
-                <img src="/storage/images/main/spacehuggers.jpg">
-                <div class="label">Space Huggers</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="funny shooter">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/funnyshooter">
-                <img src="/storage/images/main/funnyshooter.jpg">
-                <div class="label">Funny Shooter</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="slope 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/slope2/">
-                <img src="/storage/ag/g/slope2/splash.png">
-                <div class="label">Slope 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="slope">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/slope/">
-                <img src="/storage/ag/g/slope/IMG_5256.jpeg">
-                <div class="label">Slope</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="geometry dash">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/geometrydash/">
-                <img src="/storage/images/main/geo.jpeg">
-                <div class="label">Geometry Dash</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="geometry dash full version">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/geometrydash2/">
-                <img src="/storage/images/main/geo.jpeg">
-                <div class="label">Geometry Dash Full Version</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="cookie clicker">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/cookie-clicker/">
-                <img src="/storage/images/main/cookie.jpeg">
-                <div class="label">Cookie Clicker</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="moto-3xm">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/motox3m/">
-                <img src="/storage/images/main/moto.jpg">
-                <div class="label">Moto-3XM</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="moto-3xm 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/motox3m2/">
-                <img src="/storage/images/main/moto2.jpg">
-                <div class="label">Moto-3XM 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="moto-3xm 3">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/motox3m3/">
-                <img src="/storage/images/main/moto3.jpg">
-                <div class="label">Moto-3XM 3</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="moto-3xm 4">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/motox3m-winter/">
-                <img src="/storage/images/main/moto4.jpg">
-                <div class="label">Moto-3XM 4: Winter</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="moto-3xm 5">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/motox3m-pool/">
-                <img src="/storage/images/main/moto5.jpg">
-                <div class="label">Moto-3XM 5: Pool</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="2 player" data-label="getaway shootout">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/getawayshootout">
-                <img src="/storage/images/main/getaway.jpg">
-                <div class="label">Getaway Shootout</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="2 player" data-label="rooftop snipers">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/rooftopsnipers">
-                <img src="/storage/images/main/rooftop.jpg">
-                <div class="label">Rooftop Snipers</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="2 player" data-label="rooftop snipers 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/rooftopsnipers2">
-                <img src="/storage/images/main/rooftop2.jpg">
-                <div class="label">Rooftop Snipers 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="flight simulator">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/geofs">
-                <img src="/storage/images/main/geofs.jpg">
-                <div class="label">Flight Simulator</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="kart wars">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/kartwars">
-                <img src="/storage/images/main/kart.jpg">
-                <div class="label">Kart Wars</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="bullet force">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/bulletforce">
-                <img src="/storage/images/main/bulletforce.jpg">
-                <div class="label">Bullet Force</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="tunel rush">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/tunnelrush">
-                <img src="/storage/images/main/tunnelrush.jpg">
-                <div class="label">Tunnel Rush</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-category="shooting" data-label="downtown mafia (gta)">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/gta">
-                <img src="/storage/images/main/gta.jpg">
-                <div class="label">Downtown Mafia</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="csgo clicker">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/csgoclicker">
-                <img src="/storage/images/main/csgo.jpg">
-                <div class="label">CSGO Clicker</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="papery planes">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/papery-planes">
-                <img src="/storage/images/main/paperyplanes.jpg">
-                <div class="label">Papery Planes</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="superhot">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/superhot/game">
-                <img src="/storage/images/main/superhot1.jpg">
-                <div class="label">Superhot</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="world guesser">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/worldg">
-                <img src="/storage/images/main/worldg.jpg">
-                <div class="label">World Guesser</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="super mario 64">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/mario/wasd/">
-                <img src="/storage/images/main/supermario.jpg">
-                <div class="label">Super Mario 64</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="tetris">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/tetris">
-                <img src="/storage/images/main/tetris.jpg">
-                <div class="label">Tetris</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="wordle">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/wordle">
-                <img src="/storage/images/main/wordle.jpg">
-                <div class="label">Wordle</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="tiny fishing">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/tinyfishing">
-                <img src="/storage/images/main/tinyfishing.jpg">
-                <div class="label">Tiny Fishing</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-category="action" data-label="10 minutes till dawn">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/10minutestilldawn">
-                <img src="/storage/images/main/10mins.jpg">
-                <div class="label">10 Minutes Till Dawn</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="minecraft">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/mc">
-                <img src="/storage/images/main/minecraft.jpg">
-                <div class="label">Minecraft</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="eggy car">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/eggycar">
-                <img src="/storage/images/main/eggy.jpg">
-                <div class="label">Eggy Car</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="hextris">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/hextris">
-                <img src="/storage/images/main/hextris.png">
-                <div class="label">Hextris</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="2 player" data-label="house of hazards">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/houseofhazards">
-                <img src="/storage/images/main/houseofhazards.jpg">
-                <div class="label">House of Hazards</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="fallen london">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/fallenlondon">
-                <img src="/storage/images/main/fallenlondon.jpg">
-                <div class="label">Fallen London</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="zombie apocolypse">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/zombocalypse">
-                <img src="/storage/images/main/zombiea.jpg">
-                <div class="label">Zombie Apocolypse</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="infinite craft">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/infinitecraft">
-                <img src="/storage/images/main/infinitec.jpg">
-                <div class="label">Infinite Craft</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="2048">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/2048/">
-                <img src="/storage/ag/g/2048/meta/apple-touch-icon.png">
-                <div class="label">2048</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="snow battle">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/snowbattle/">
-                <img src="/storage/images/main/snow.jpeg">
-                <div class="label">Snow Battle</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="vex 6">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/vex6/">
-                <img src="/storage/images/main/vex6.jpg">
-                <div class="label">Vex 6</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="doge miner">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/DogeMiner/">
-                <img src="/storage/ag/g/DogeMiner/img/dogeminer_300x300.png">
-                <div class="label">Doge Miner</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="death run 3d">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/death-run-3d">
-                <img src="/storage/images/main/dr3d.jpg">
-                <div class="label">Death Run 3D</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="drift boss">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/drift-boss">
-                <img src="/storage/images/main/driftb.jpg">
-                <div class="label">Drift Boss</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-category="shooting" data-label="recoil">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/recoil">
-                <img src="/storage/images/main/recoil.jpg">
-                <div class="label">Recoil</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="bitlife">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/bite/">
-                <img src="/storage/ag/g/bite/logo.png">
-                <div class="label">Bitlife</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="crusher clicker">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/crusherclicker">
-                <img src="/storage/images/main/crusherclicker.jpg">
-                <div class="label">Crusher Clicker</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="adofai">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/adofai/">
-                <img src="/storage/ag/g/adofai/splash.png">
-                <div class="label">A.D.O.F.A.I</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="basketball stars">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/basketball-stars/">
-                <img src="/storage/ag/g/basketball-stars/assets/images/basketball-stars.png">
-                <div class="label">Basketball Stars</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="basketbro io">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/basketbros-io/">
-                <img src="/storage/images/main/basketbros.jpeg">
-                <div class="label">Basketbros.io</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="awesome tanks 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/awesometanks2/">
-                <img src="/storage/ag/g/awesometanks2/IMG_5282.png">
-                <div class="label">Awesome Tanks 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="basketball random">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/basketrandom">
-                <img src="/storage/images/main/basketballrandom.jpg">
-                <div class="label">Basketball Random</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="boxing random">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/boxing-random/">
-                <img src="/storage/images/main/boxingrandom.jpg">
-                <div class="label">Boxing Random</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="soccer random">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/soccerrandom/">
-                <img src="/storage/ag/g/soccerrandom/unnamed.png">
-                <div class="label">Soccer Random</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="bad ice cream">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/bad-ice-cream/">
-                <img src="/storage/ag/g/bad-ice-cream/bad-ice-cream.png">
-                <div class="label">Bad Ice Cream</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="bad ice cream 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/bad-ice-cream-2/">
-                <img src="/storage/ag/g/bad-ice-cream-2/bad-ice-cream-2.png">
-                <div class="label">Bad Ice Cream 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="bad ice cream 3">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/bad-ice-cream-3/">
-                <img src="/storage/ag/g/bad-ice-cream-3/bad-ice-cream-3.png">
-                <div class="label">Bad Ice Cream 3</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="roblox">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/pages/other/test/roblox.html">
-                <img src="/storage/ag/g/roblox/roblox.jpeg">
-                <div class="label">Roblox</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="stunt paradise">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/stuntparadise/">
-                <img src="/storage/images/main/stunt.jpg">
-                <div class="label">Stunt Paradise</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="melon playground">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/melonplayground/">
-                <img src="/storage/ag/g/melonplayground/IMG_5304.jpeg">
-                <div class="label">Melon Playground</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="fc mobile">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/fc/">
-                <img src="/storage/ag/g/fc/IMG_5312.webp">
-                <div class="label">FC Mobile</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="angry sharks">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/angry-sharks/">
-                <img src="/storage/ag/g/angry-sharks/assets/favicon/icon-512x512.png">
-                <div class="label">Angry Sharks</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="breaking the bank">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/breakingthebank/">
-                <img src="/storage/ag/g/breakingthebank/breakingthebank.png">
-                <div class="label">Breaking The Bank</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="venge">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/venge/">
-                <img src="/storage/ag/g/venge/IMG_5229.jpeg">
-                <div class="label">Venge</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="drive mad">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/drive-mad/">
-                <img src="/storage/ag/g/drive-mad/logo.jpg">
-                <div class="label">Drive Mad</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-category="shooting" data-label="creative kill chamber">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/creativekillchamber/">
-                <img src="/storage/ag/g/creativekillchamber/creativekillchamber.jpg">
-                <div class="label">Creative Kill Chamber</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="gravity soccer">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/gravity-soccer/">
-                <img src="/storage/ag/g/gravity-soccer/splash.png">
-                <div class="label">Gravity Soccer</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="lol beans">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/lolbeans/">
-                <img src="/storage/ag/g/lolbeans/IMG_5301.jpeg">
-                <div class="label">LOL Beans</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="krunker">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/krunker/">
-                <img src="/storage/ag/g/krunker/IMG_5299.png">
-                <div class="label">Krunker</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="io" data-label="shell shockers">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/shellshockersio">
-                <img src="/storage/ag/g/shellshockers/IMG_5300.png">
-                <div class="label">Shell Shockers</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="flappy bird">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/flappy-bird/">
-                <img src="/storage/ag/g/flappy-bird/assets/thumb.png">
-                <div class="label">Flappy Bird</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="ducklife">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/ducklife/">
-                <img src="/storage/ag/g/ducklife/IMG_5307.png">
-                <div class="label">Ducklife</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="ducklife 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/ducklife2/">
-                <img src="/storage/ag/g/ducklife2/IMG_5308.png">
-                <div class="label">Ducklife 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="ducklife 3">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/ducklife3/">
-                <img src="/storage/ag/g/ducklife3/IMG_5309.png">
-                <div class="label">Ducklife 3</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="ducklife 4">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/ducklife4/">
-                <img src="/storage/ag/g/ducklife4/IMG_5310.png">
-                <div class="label">Ducklife 4</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="red ball 4">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/redball/1.html">
-                <img src="/storage/ag/g/redball/IMG_5315.jpeg">
-                <div class="label">Red Ball 4</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="red ball 4 vol 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/redball/2.html">
-                <img src="/storage/ag/g/redball/IMG_5316.webp">
-                <div class="label"> jemRed Ball 4 Vol 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="red ball 4 vol 3">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/redball/3.html">
-                <img src="/storage/ag/g/redball/IMG_5317.webp">
-                <div class="label">Red Ball 4 Vol 3</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="eaglercraft">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/eaglercraft/">
-                <img src="/storage/ag/g/eaglercraft/buddyholly.jpg">
-                <div class="label">Eaglercraft</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="diggy">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/diggy/">
-                <img src="/storage/images/main/diggy.jpeg">
-                <div class="label">Diggy</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="gun mayhem">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/guymayhem/">
-                <img src="/storage/ag/g/guymayhem/icon.png">
-                <div class="label">Gun Mayhem</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="gun mayhem 2">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/gunmayhem2/">
-                <img src="/storage/ag/g/gunmayhem2/gh2.webp">
-                <div class="label">Gun Mayhem 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="shooting" data-label="gun mayhem redux">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/gunmayhemredux/">
-                <img src="/storage/ag/g/gunmayhemredux/gunmayhemredux.jpeg">
-                <div class="label">Gun Mayhem Redux</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="run 3">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/run3/">
-                <img src="/storage/ag/g/run3/run3.png">
-                <div class="label">Run 3</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="tomb of the mask">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/totm/">
-                <img src="/storage/ag/g/totm/splash.webp">
-                <div class="label">Tomb Of The Mask</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="paper minecraft">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/paperminecraft/Paper Minecraft v11.html">
-                <img src="/storage/ag/g/paperminecraft/IMG_5319.jpeg">
-                <div class="label">Paper Minecraft</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="madness accelerant">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/ma/">
-                <img src="/storage/ag/g/ma/IMG_5320.jpeg">
-                <div class="label">Madness Accelerant</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="a small world cup">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/asmallworldcup/">
-                <img src="/storage/ag/g/asmallworldcup/icon-256.png">
-                <div class="label">A Small World Cup</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="block blast">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/blockblast/">
-                <img src="/storage/ag/g/blockblast/s.png">
-                <div class="label">Block Blast</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="snow rider 3d">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/snowrider3d/">
-                <img src="/storage/ag/g/snowrider3d/snow-rider-3d.png">
-                <div class="label">Snow Rider 3D</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="google snake">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/google-snake/">
-                <img src="/storage/ag/g/google-snake/img/snake.png">
-                <div class="label">Google Snake</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="age of war">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/age-of-war/">
-                <img src="/storage/ag/g/age-of-war/icon.jpg">
-                <div class="label">Age Of War</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="angry birds">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/angrybirds/">
-                <img src="/storage/ag/g/angrybirds/logo.webp">
-                <div class="label">Angry Birds</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="astray">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/astray/">
-                <img src="/storage/ag/g/astray/astray.jpeg">
-                <div class="label">Astray</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="bounce back">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/bounceback/">
-                <img src="/storage/ag/g/bounceback/screenshot.png">
-                <div class="label">Bounce Back</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="blocky snakes">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/blocky-snakes/">
-                <img src="/storage/ag/g/blocky-snakes/icon.png">
-                <div class="label">Blocky Snakes</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="little alchemy">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/littlealchemy/">
-                <img src="/storage/ag/g/littlealchemy/image_2024-08-30_152806221.png">
-                <div class="label">Little Alchemy</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="little alchemy">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/littlealchemy2/">
-                <img src="/storage/ag/g/littlealchemy2/a2.png">
-                <div class="label">Little Alchemy 2</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="space waves">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/crazygames">
-                <img src="/storage/images/main/spacewaves.jpg">
-                <div class="label">Space Waves</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="stick merge">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/stick-merge/">
-                <img src="/storage/ag/g/stick-merge/splash.png">
-                <div class="label">Stick Merge</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="sports" data-label="retro bowl">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/retro-bowl/">
-                <img src="/storage/ag/g/retro-bowl/img/icon.jpg">
-                <div class="label">Retro Bowl</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="strategy" data-label="core ball">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/core-ball/">
-                <img src="/storage/ag/g/core-ball/coreball.png">
-                <div class="label">Core Ball</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="deepest sword">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/deepest-sword/">
-                <img src="/storage/ag/g/deepest-sword/deepestsword.png">
-                <div class="label">Deepest Sword</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="skill" data-label="Zombs Royale">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/zombsroyale/">
-                <img src="/storage/ag/g/zombsroyale/zombsroyale.webp">
-                <div class="label">Zombs Royale</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="pokemon ruby">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/pokemongames/pokemonruby/">
-                <img src="/storage/ag/g/pokemongames/pokemonruby/pokemon ruby.jpeg">
-                <div class="label">Pokemon Ruby</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="spider-man venoms vengence">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/spidermanvenomsvengence/">
-                <img src="/storage/ag/g/spidermanvenomsvengence/splash.png">
-                <div class="label">Spider-Man Venom's Vengence</div>
-            </a>
-        </div>
-        <div class="image-item" data-category="action" data-label="slow roads">
-            <button class="heart-btn" onclick="toggleFavorite(this)">♥</button>
-            <a href="/iframe.html?url=/storage/ag/g/slow-roads/">
-                <img src="/storage/ag/g/slowroads/splash.jpeg">
-                <div class="label">Slow Roads</div>
-            </a>
-        </div>
-        <div class="ad-container-horizantal">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6640595376330309"
-                 crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center; background-color: dark blue;"
-                 data-ad-layout="in-article"
-                 data-ad-format="fluid"
-                 data-ad-client="ca-pub-6640595376330309"
-                 data-ad-slot="2445086545"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
+    </div>
+
+    <div class="ad-container-horizantal">
+        <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6640595376330309"
+            crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block; text-align:center; background-color: dark blue;"
+            data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-6640595376330309"
+            data-ad-slot="2445086545"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 
     <script>
-        let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        let games = [];
+        let pinnedGames = JSON.parse(localStorage.getItem('pinnedGames')) || [];
 
-        function toggleFavorite(button) {
-            const item = button.parentElement;
-            const label = item.dataset.label;
-            const isFavorited = button.classList.contains('favorited');
+        function updatePinnedDisplay() {
+            const pinnedContainer = document.getElementById('pinnedContainer');
+            pinnedContainer.innerHTML = '';
 
-            if (isFavorited) {
-                button.classList.remove('favorited');
-                favorites = favorites.filter(fav => fav.label !== label);
-                removeFromPinned(item);
-            } else {
-                button.classList.add('favorited');
-                favorites.push({
-                    label: label,
-                    html: item.outerHTML
+            if (pinnedGames.length > 0) {
+                pinnedContainer.style.display = 'flex';
+                pinnedGames.forEach(game => {
+                    const pinnedItem = document.createElement('div');
+                    pinnedItem.className = 'pinned-item';
+                    pinnedItem.innerHTML = `
+                        <img src="${game.imageUrl}">
+                        <span class="remove-pin" onclick="removePin('${game.label}')">x</span>
+                    `;
+                    pinnedContainer.appendChild(pinnedItem);
                 });
-                addToPinned(item);
-            }
-
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-        }
-
-        function addToPinned(item) {
-            const pinnedContainer = document.getElementById('pinnedContainer');
-            const clone = item.cloneNode(true);
-            clone.querySelector('.heart-btn').onclick = function() { toggleFavorite(this); };
-            pinnedContainer.appendChild(clone);
-        }
-
-        function removeFromPinned(item) {
-            const pinnedContainer = document.getElementById('pinnedContainer');
-            const label = item.dataset.label;
-            const pinnedItem = pinnedContainer.querySelector(`[data-label="${label}"]`);
-            if (pinnedItem) {
-                pinnedContainer.removeChild(pinnedItem);
+            } else {
+                pinnedContainer.style.display = 'none';
             }
         }
 
-        function loadFavorites() {
-            const pinnedContainer = document.getElementById('pinnedContainer');
-            favorites.forEach(fav => {
-                pinnedContainer.innerHTML += fav.html;
-                const originalItem = document.querySelector(`.image-item[data-label="${fav.label}"]`);
-                if (originalItem) {
-                    originalItem.querySelector('.heart-btn').classList.add('favorited');
+        function togglePin(game) {
+            const index = pinnedGames.findIndex(pinnedGame => pinnedGame.label === game.label);
+            if (index === -1) {
+                pinnedGames.push(game);
+            } else {
+                pinnedGames.splice(index, 1);
+            }
+            localStorage.setItem('pinnedGames', JSON.stringify(pinnedGames));
+            updatePinnedDisplay();
+        }
+
+        function removePin(label) {
+            pinnedGames = pinnedGames.filter(game => game.label !== label);
+            localStorage.setItem('pinnedGames', JSON.stringify(pinnedGames));
+            updatePinnedDisplay();
+        }
+
+        // Fetch games data from JSON file
+        async function loadGames() {
+            try {
+                const response = await fetch('/storage/data/games.json');
+                const data = await response.json();
+                games = data.games;
+                displayGames(games);
+                updatePinnedDisplay();
+            } catch (error) {
+                console.error('Error loading games:', error);
+            }
+        }
+
+        // Display games in the container
+        function displayGames(gamesToShow) {
+            const container = document.getElementById('imageContainer');
+            container.innerHTML = '';
+
+            gamesToShow.forEach(game => {
+                const div = document.createElement('div');
+                div.className = 'image-item';
+                div.setAttribute('data-label', game.label);
+                if (game.categories.length > 0) {
+                    div.setAttribute('data-category', game.categories[0]);
                 }
-            });
-            pinnedContainer.querySelectorAll('.heart-btn').forEach(btn => {
-                btn.onclick = function() { toggleFavorite(this); };
+
+                div.innerHTML = `
+                    <a href="${game.url}">
+                        <img src="${game.imageUrl}">
+                        <div class="label">${game.label}</div>
+                    </a>
+                    <button class="heart-button" onclick="togglePin(${JSON.stringify(game)})">&#10084;</button>
+                `;
+                container.appendChild(div);
             });
         }
-
         function filterItems() {
             const searchInput = document.getElementById('search-games').value.toLowerCase();
-            document.querySelectorAll('.image-item').forEach(item => {
-                const label = item.dataset.label.toLowerCase();
-                item.style.display = label.includes(searchInput) ? '' : 'none';
-            });
+            const filteredGames = games.filter(game => 
+                game.label.toLowerCase().includes(searchInput)
+            );
+            displayGames(filteredGames);
         }
 
-        function randomGame() {
-            const games = document.querySelectorAll('.image-item');
+        function randomGameOpen() {
+            if (games.length > 0) {
             const randomIndex = Math.floor(Math.random() * games.length);
-            const randomGame = games[randomIndex].querySelector('a').href;
-            window.location.href = randomGame;
+                const randomGame = games[randomIndex];
+                window.location.href = randomGame.url;
+            }
         }
 
         function filterByCategory() {
             const category = document.getElementById('gameFilter').value.toLowerCase();
-            document.querySelectorAll('.image-item').forEach(item => {
-                if (category && item.dataset.category !== category) {
-                    item.style.display = 'none';
-                } else {
-                    item.style.display = '';
-                }
-            });
+            const filteredGames = category ? 
+                games.filter(game => game.categories.includes(category)) :
+                games;
+            displayGames(filteredGames);
         }
 
+        // Load games when the page loads
         document.addEventListener('DOMContentLoaded', () => {
-            const items = document.querySelectorAll('.image-item');
-            items.forEach((item, index) => {
-                item.style.setProperty('--order', index);
+            loadGames();
             });
-            loadFavorites();
-        });
     </script>
     <script src="/storage/js/settings.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,85 @@
+<html><head><link href="https://fonts.googleapis.com/css2?family=Anta&amp;display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}</style>
+</head><body>
+<h1>92Gen</h1>
+<h2>enter a url to unblock</h2>
+<input id="input">
+<button onclick="gen()">Ready up</button>
+<label>Select a different version if not working:</label>
+  <select id="version">
+    <option value="0">1</option>
+    <option value="1">2</option>
+    <option value="2">3</option>
+  </select>
+<a id="output" target="_blank"></a>
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;92ff6a80d9f6c5bd&quot;,&quot;version&quot;:&quot;2025.3.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;93e9951688af41ff8fd11cbe84263253&quot;,&quot;serverTiming&quot;:{&quot;name&quot;:{&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfSpeedBrain&quot;:true,&quot;cfCacheStatus&quot;:true}}}" crossorigin="anonymous"></script>
+
+<script>
+function gen() {
+    var output = document.getElementById('output');
+    var input = document.getElementById('input').value;
+
+    if (input.includes("?")) {
+        output.setAttribute('href', input + "&unblock=" + generateRandomURL());
+    } else {
+        if (input.startsWith("https://") || input.startsWith("http://")) {
+            output.setAttribute('href', input + "?unblock=" + generateRandomURL());
+        } else {
+            output.setAttribute('href', "https://" + input + "?unblock=" + generateRandomURL());
+        }
+    }
+    output.innerHTML = "CLICK ME";
+}
+var words = [
+  "apple", "banana", "cherry", "dog", "elephant", "flower", "guitar", "happy",
+  "ice cream", "jazz", "kangaroo", "lemon", "mountain", "notebook", "ocean",
+  "penguin", "quasar", "rainbow", "sunshine", "turtle", "umbrella", "violin",
+  "waterfall", "xylophone", "yellow", "zebra", "airplane", "butterfly", "cactus",
+  "dolphin", "eagle", "firefly", "net", "happiness", "island", "jungle",
+  "koala", "lighthouse", "moonlight", "nebula", "octopus", "paradise", "quantum",
+  "robot", "com", "tiger", "unicorn", "volcano", "whale", "xylograph", "yarn",
+  "zephyr", "astronomy", "boulevard", "cosmic", "dreamer", "ethereal", "fantasy",
+  "glisten", "harmony", "illuminate", "journey", "kaleidoscope", "luminous",
+  "mystical", "nirvana", "oasis", "paradox", "quintessence", "radiant", "serenity",
+  "tranquil", "utopia", "vivid", "whisper", "xanadu", "yearning", "zenith"
+];
+
+var tlds = ["com", "net", "org", "io", "co", "xyz", "info", "biz"];
+
+var thing = ['docs.google.com','mail.google.com','clever.com']
+
+function generateRandomURL() {
+    let url = "";
+
+    var minSubdomains = 50;
+
+    var numSubdomains = Math.max(minSubdomains, Math.floor(Math.random() * 100) + 1); // Random number of subdomains (minSubdomains to 4)
+    for (let i = 0; i < numSubdomains; i++) {
+        if (Math.random() > 0.5) { 
+            url += Math.floor(Math.random() * 1000);
+        } else {
+            let randomIndex = Math.floor(Math.random() * words.length);
+            url += words[randomIndex];
+        }
+        url += ".";
+    }
+
+    url += Math.floor(Math.random() * 1000);
+
+    var randomIndex = Math.floor(Math.random() * tlds.length);
+    url += "." + tlds[randomIndex];
+
+    var position = Math.floor(Math.random() * (url.length + 1)); 
+    url = url.slice(0, position) + thing[document.getElementById("version").value] + "." + url.slice(position);
+    return url;
+    
+}
+
+console.log(generateRandomURL());
+
+</script></body></html>

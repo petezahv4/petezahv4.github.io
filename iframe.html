@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,8 +87,6 @@
     transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
 }
 
-
-
 iframe {
     width: 100%;
     height: 100%;
@@ -123,7 +122,6 @@ iframe {
 .controls i:last-child {
     margin-right: 0; /* Remove extra margin from last icon */
 }
-
     </style>
 </head>
 <body>
@@ -155,13 +153,23 @@ iframe {
 </script>
 
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const url = urlParams.get('url');
+        // Get the full query string
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let url = urlParams.get('url');
+
+        // If the URL contains a fragment, it might be in window.location.hash
+        // Reconstruct the full URL if needed
+        if (url && window.location.hash) {
+            url = url + window.location.hash;
+        }
+
         const iframe = document.getElementById('myIframe');
 
         if (url) {
             iframe.src = url;
             localStorage.setItem('iframeUrl', url);
+            // Clean up the URL but preserve the path
             history.replaceState(null, '', window.location.pathname);
         } else {
             const savedUrl = localStorage.getItem('iframeUrl');

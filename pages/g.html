@@ -528,7 +528,7 @@
         // Fetch games data from JSON file
         async function loadGames() {
             try {
-                const response = await fetch('/storage/data/games.json');
+                const response = await fetch('/storage/data/games2.json');
                 const data = await response.json();
                 games = data.games;
                 displayGames(games);

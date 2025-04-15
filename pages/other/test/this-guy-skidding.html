@@ -1,0 +1,1042 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vplaza v1</title>
+    <link rel="icon" type="image/x-icon" href="/v1/files/v1-info/images/vplazav1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #e8eaed;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-grow: 1;
+            height: calc(100vh - 40px);
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 56px;
+            height: 100%;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+            z-index: 10;
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 8px 0;
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+
+        .sidebar:hover {
+            background-color: #8c00005b;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+
+        .sidebar-divider {
+            width: 24px;
+            height: 3px;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 8px 0;
+        }
+
+        .opera-logo {
+            width: 40px;
+            height: 32px;
+            margin: 8px 0 16px;
+            position: relative;
+        }
+
+        .opera-logo svg {
+            fill: #ff0037;
+            transition: 0.5s;
+        }
+
+        .opera-logo svg:hover {
+            fill: #8c00005b;
+            box-shadow: 0 4px 15px rgba(255, 0, 128, 0.7);
+            border-radius: 50px;
+        }
+
+        .sidebar-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .tab {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 4px 0;
+            cursor: pointer;
+            position: relative;
+            color: #666;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar .tab i {
+            font-size: 18px;
+        }
+
+        .sidebar .tab:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #fff;
+        }
+
+        .sidebar .tab.active {
+            color: #ff0000;
+        }
+
+        .sidebar .tab.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 16px;
+            background-color: #fa1e4e;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tabs-top-bar {
+            display: flex;
+            height: 40px;
+            background-color: #000000;
+            align-items: center;
+            padding: 0 8px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            flex-shrink: 0;
+            transition: 0.3s;
+        }
+
+        .tabs-top-bar:hover {
+            background-color: #8c00005b;
+        }
+
+        .tabs-top-bar::-webkit-scrollbar {
+            height: 0;
+            background: transparent;
+        }
+
+        .tabs-top-bar .tab {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            margin-right: 3px;
+            padding: 0 10px;
+            cursor: pointer;
+            position: relative;
+            color: #aaa;
+            transition: all 0.2s ease;
+            background-color: #000000;
+            min-width: 120px;
+            max-width: 200px;
+        }
+
+        .tabs-top-bar .tab .tab-icon {
+            margin-right: 8px;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tabs-top-bar .tab .tab-title {
+            flex-grow: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 12px;
+        }
+
+        .tabs-top-bar .tab .tab-close {
+            margin-left: 8px;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .tabs-top-bar .tab .tab-close:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .tabs-top-bar .tab:hover {
+            background-color: #000000;
+            color: #fff;
+        }
+
+        .tabs-top-bar .tab.active {
+            background-color: #000000;
+            color: #fff;
+        }
+
+        .tabs-top-bar .tab.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fa1e4e;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .tabs-top-bar .new-tab {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .tabs-top-bar .new-tab:hover {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.4s;
+            margin: 4px 0;
+        }
+
+        .sidebar-icon:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #ff0000;
+        }
+
+        .sidebar-icon.active {
+            color: #fff;
+            background-color: rgba(250, 30, 78, 0.15);
+        }
+
+        .sidebar-bottom {
+            margin-top: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #000000;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .browser-header {
+            background-color: #000000;
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            height: 52px;
+            transition: 1s;
+        }
+
+        .browser-header:hover {
+            background-color: #8c00005b;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .url-bar-container {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            font-family: poppins;
+        }
+
+        .browser-actions {
+            display: flex;
+            margin-right: 8px;
+            transition: 0.5s;
+        }
+
+        .action-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-size: 14px;
+            margin-right: 4px;
+        }
+
+        .action-btn:hover {
+            background-color: rgba(255, 0, 0, 0.1);
+            color: #fff;
+        }
+
+        .url-bar-wrapper {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            height: 36px;
+            background-color: #000000;
+            border-radius: 4px;
+            padding: 0 10px;
+            margin: 0 10px;
+            transition: 0.5s;
+        }
+
+        .url-bar-wrapper:hover {
+            background-color: #8c00005b;
+        }
+
+        .url-bar {
+            flex-grow: 1;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: #ff0044;
+            font-size: 14px;
+            padding: 0 10px;
+            font-family: poppins;
+        }
+
+        .url-bar-icon {
+            color: #ff0044;
+            font-size: 14px;
+            transition: 1s;
+        }
+
+        .url-bar-icon:hover {
+            color: black;
+        }
+
+        .window-controls {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .window-btn {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6f6f6f;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+
+        .window-btn:hover {
+            color: #ff00005b;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .window-btn.close:hover {
+            background-color: #3f3f3f78;
+        }
+
+        .content-area {
+            flex-grow: 1;
+            overflow: hidden;
+            position: relative;
+            height: calc(100% - 52px);
+        }
+
+        .tab-content {
+            width: 100%;
+            height: 100%;
+            display: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-top-left-radius: 20px;
+            border: 3px solid rgb(255, 0, 119);
+            display: block;
+        }
+
+        .loading-bar-container {
+            position: absolute;
+            top: 52px;
+            left: 10px;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            overflow: hidden;
+            display: none;
+            z-index: 100;
+        }
+
+        .loading-bar {
+            height: 100%;
+            width: 0;
+            background-color: #ff0000;
+            animation: loading 2s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% { width: 0; transform: translateX(0); }
+            50% { width: 50%; transform: translateX(50%); }
+            100% { width: 0; transform: translateX(100%); }
+        }
+
+        .background-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .wave-background {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('uploads/dgfk1h6f2m1-image.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            z-index: -1;
+        }
+
+        .new-tab {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: 4px 0;
+            transition: color 0.2s;
+        }
+
+        .new-tab:hover {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs-top-bar" id="tabs-top-bar"><div class="tab" data-tab-id="0" data-url="/landin">
+                <div class="tab-icon"><img src="https://www.google.com/s2/favicons?domain=vplaza.org" alt=""></div>
+                <div class="tab-title">New Tab | Vplaza</div>
+                <div class="tab-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div><div class="tab active" data-tab-id="1" data-url="/landin">
+                <div class="tab-icon"><img src="https://www.google.com/s2/favicons?domain=vplaza.org" alt=""></div>
+                <div class="tab-title">New Tab | Vplaza</div>
+                <div class="tab-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div><div class="new-tab" id="new-tab-btn-top">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="opera-logo">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 2C8.27 2 2 8.27 2 16s6.27 14 14 14 14-6.27 14-14S23.73 2 16 2zm0 22.5c-4.694 0-8.5-3.806-8.5-8.5s3.806-8.5 8.5-8.5 8.5 3.806 8.5 8.5-3.806 8.5-8.5 8.5z"></path>
+                </svg>
+            </div>
+
+            <div class="sidebar-section tabs-section" id="sidebar-tabs-section" style="display:none;">
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-icon" data-url="/active/Embed.html?url=https://www.twitch.tv">
+                    <i class="fa-brands fa-twitch"></i>
+                </div>
+                <div class="sidebar-icon" data-url="/gamepagev1">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div class="sidebar-icon" data-url="/active/Embed.html?url=https://play.geforcenow.com">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+                <div class="sidebar-icon" data-url="/tutorials">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-icon" data-url="/v-ai">
+                    <i class="bi bi-phone"></i>
+                </div>
+                <div class="sidebar-icon" data-url="/ai">
+                    <i class="bi bi-robot"></i>
+                </div>
+                <div class="sidebar-icon" data-url="/a">
+                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                </div>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-divider"></div>
+                <div class="sidebar-icon" data-url="/active/Embed.html?url=https://calendar.google.com">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="sidebar-icon" data-url="/active/Embed.html?url=https://www.dropbox.com">
+                    <i class="fa-solid fa-cube"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="browser-header">
+                <div class="url-bar-container">
+                    <div class="browser-actions">
+                        <div class="action-btn" id="back-btn">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </div>
+                        <div class="action-btn" id="forward-btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <div class="action-btn" id="reload-btn">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                    </div>
+                    <div class="url-bar-wrapper">
+                        <i class="fa-solid fa-magnifying-glass url-bar-icon"></i>
+                        <input type="text" class="url-bar" id="url-bar" placeholder="Enter search or web address">
+                    </div>
+                    <div class="window-controls">
+                        <div class="window-btn">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+                        <div class="window-btn">
+                            <i class="fa-regular fa-square"></i>
+                        </div>
+                        <div class="window-btn close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="loading-bar-container" id="loading-bar-container">
+                    <div class="loading-bar"></div>
+                </div>
+            </div>
+            <div class="content-area" id="content-area">
+                <div class="tab-content" id="tab-content-0">
+                    <iframe src="/landin" id="frame-0" onload="frameLoaded(0)" data-is-loading="false"></iframe>
+                </div>
+            <div class="tab-content active" id="tab-content-1"><iframe src="/landin" id="frame-1" onload="frameLoaded(1)" data-is-loading="false"></iframe></div></div>
+
+            <div class="background-container">
+                <div class="wave-background"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let activeTabId = 0;
+        let tabCounter = 1;
+        let tabsInSidebar = false;
+
+        const sidebar = document.getElementById('sidebar');
+        const sidebarTabsSection = document.getElementById('sidebar-tabs-section');
+        const topTabsBar = document.getElementById('tabs-top-bar');
+        const contentArea = document.getElementById('content-area');
+        const urlBar = document.getElementById('url-bar');
+        const newTabBtnTop = document.getElementById('new-tab-btn-top');
+        const settingsBtn = document.getElementById('settings-btn');
+        const backBtn = document.getElementById('back-btn');
+        const forwardBtn = document.getElementById('forward-btn');
+        const reloadBtn = document.getElementById('reload-btn');
+        const loadingBarContainer = document.getElementById('loading-bar-container');
+
+        const initialTabs = [
+            { id: 0, title: 'New Tab', url: '/landin', icon: 'fa-home' }
+        ];
+
+        function initializeTabs() {
+            while (topTabsBar.firstChild) {
+                if (topTabsBar.firstChild.id === 'new-tab-btn-top') {
+                    break;
+                }
+                topTabsBar.removeChild(topTabsBar.firstChild);
+            }
+
+            initialTabs.forEach(tab => {
+                createTopTab(tab.id, tab.title, tab.url, tab.icon);
+            });
+
+            switchTab(activeTabId);
+        }
+
+        function createTopTab(tabId, title, url, icon) {
+            const tab = document.createElement('div');
+            tab.className = 'tab';
+            tab.dataset.tabId = tabId;
+            tab.dataset.url = url;
+
+            const faviconUrl = url.startsWith('/landin')
+                ? ''
+                : `https://www.google.com/s2/favicons?domain=${extractDomain(url)}`;
+
+            tab.innerHTML = `
+                <div class="tab-icon">
+                    ${faviconUrl ? `<img src="${faviconUrl}" alt="">` : `<i class="fa-solid ${icon || 'fa-globe'}"></i>`}
+                </div>
+                <div class="tab-title">${title}</div>
+                <div class="tab-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            `;
+
+            topTabsBar.insertBefore(tab, newTabBtnTop);
+
+            tab.addEventListener('click', (e) => {
+                if (!e.target.closest('.tab-close')) {
+                    switchTab(tabId);
+                }
+            });
+
+            const closeBtn = tab.querySelector('.tab-close');
+            closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeTab(tabId);
+            });
+        }
+
+        function createSidebarTab(tabId, url, icon) {
+            const tab = document.createElement('div');
+            tab.className = 'tab';
+            tab.dataset.tabId = tabId;
+            tab.dataset.url = url;
+
+            const faviconUrl = url.startsWith('/landin')
+                ? ''
+                : `https://www.google.com/s2/favicons?domain=${extractDomain(url)}`;
+
+            if (faviconUrl) {
+                tab.innerHTML = `<img src="${faviconUrl}" alt="" style="width:16px;height:16px;">`;
+            } else {
+                tab.innerHTML = `<i class="fa-solid ${icon || 'fa-globe'}"></i>`;
+            }
+
+            sidebarTabsSection.appendChild(tab);
+
+            tab.addEventListener('click', () => switchTab(tabId));
+        }
+
+        function extractDomain(url) {
+            if (url.startsWith('/landin')) return '';
+            try {
+
+                if (url.includes('/active/Embed.html?url=')) {
+                    const embedUrl = decodeURIComponent(url.split('/active/Embed.html?url=')[1]);
+                    if (embedUrl.includes('://')) {
+                        return new URL(embedUrl).hostname;
+                    } else if (embedUrl.includes('.')) {
+                        return embedUrl.split('/')[0];
+                    }
+                }
+
+                if (url.includes('://')) {
+                    return new URL(url).hostname;
+                } else if (url.includes('.')) {
+                    return url.split('/')[0];
+                }
+            } catch (e) {
+                console.error('Error extracting domain:', e);
+            }
+            return '';
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            let selectedTab;
+            if (tabsInSidebar) {
+                selectedTab = sidebarTabsSection.querySelector(`.tab[data-tab-id="${tabId}"]`);
+            } else {
+                selectedTab = topTabsBar.querySelector(`.tab[data-tab-id="${tabId}"]`);
+            }
+
+            const selectedContent = document.getElementById(`tab-content-${tabId}`);
+
+            if (selectedTab && selectedContent) {
+                selectedTab.classList.add('active');
+                selectedContent.classList.add('active');
+                activeTabId = parseInt(tabId);
+
+                const frameUrl = selectedTab.dataset.url;
+                updateUrlBar(frameUrl);
+            }
+        }
+
+        function updateUrlBar(url) {
+            if (url.includes('/active/Embed.html?url=')) {
+                const actualUrl = decodeURIComponent(url.split('/active/Embed.html?url=')[1]);
+                urlBar.value = actualUrl;
+            } else {
+                urlBar.value = url;
+            }
+        }
+
+        function createNewTab() {
+            const tabId = tabCounter++;
+            const newTabData = {
+                id: tabId,
+                title: 'New Tab',
+                url: '/landin',
+                icon: 'fa-globe'
+            };
+
+            if (tabsInSidebar) {
+                createSidebarTab(tabId, newTabData.url, newTabData.icon);
+            } else {
+                createTopTab(tabId, newTabData.title, newTabData.url, newTabData.icon);
+            }
+
+            const tabContent = document.createElement('div');
+            tabContent.className = 'tab-content';
+            tabContent.id = `tab-content-${tabId}`;
+            tabContent.innerHTML = `<iframe src="${newTabData.url}" id="frame-${tabId}" onload="frameLoaded(${tabId})" data-is-loading="false"></iframe>`;
+
+            contentArea.appendChild(tabContent);
+
+            switchTab(tabId);
+        }
+
+        function closeTab(tabId) {
+            const topTab = topTabsBar.querySelector(`.tab[data-tab-id="${tabId}"]`);
+            const sidebarTab = sidebarTabsSection.querySelector(`.tab[data-tab-id="${tabId}"]`);
+            const tabContent = document.getElementById(`tab-content-${tabId}`);
+
+            if ((topTab || sidebarTab) && tabContent) {
+                if (parseInt(tabId) === activeTabId) {
+                    let nextTabId = null;
+
+                    const allTabIds = Array.from(document.querySelectorAll('.tab'))
+                        .map(tab => parseInt(tab.dataset.tabId))
+                        .filter(id => id !== parseInt(tabId));
+
+                    if (allTabIds.length > 0) {
+                        nextTabId = allTabIds[0];
+                    }
+
+                    if (nextTabId !== null) {
+                        switchTab(nextTabId);
+                    }
+                }
+
+                if (topTab) topTab.remove();
+                if (sidebarTab) sidebarTab.remove();
+                tabContent.remove();
+
+                const remainingTabs = document.querySelectorAll('.tab');
+                if (remainingTabs.length === 0) {
+                    createNewTab();
+                }
+            }
+        }
+
+        function toggleTabsLocation() {
+            tabsInSidebar = !tabsInSidebar;
+
+            if (tabsInSidebar) {
+                sidebarTabsSection.style.display = 'flex';
+                sidebarTabsSection.innerHTML = '';
+
+                const topTabs = Array.from(topTabsBar.querySelectorAll('.tab'));
+                topTabs.forEach(tab => {
+                    const tabId = tab.dataset.tabId;
+                    const url = tab.dataset.url;
+                    const icon = tab.querySelector('i')?.className.split(' ')[1] || 'fa-globe';
+
+                    createSidebarTab(tabId, url, icon);
+                });
+
+                Array.from(topTabsBar.querySelectorAll('.tab')).forEach(tab => {
+                    tab.style.display = 'none';
+                });
+            } else {
+                sidebarTabsSection.style.display = 'none';
+
+                Array.from(topTabsBar.querySelectorAll('.tab')).forEach(tab => {
+                    tab.style.display = 'flex';
+                });
+            }
+
+            switchTab(activeTabId);
+        }
+
+        function goBack() {
+            const activeFrame = document.getElementById(`frame-${activeTabId}`);
+            if (activeFrame && activeFrame.contentWindow) {
+                loadingBarContainer.style.display = 'block';
+                activeFrame.dataset.isLoading = 'true';
+                try {
+                    activeFrame.contentWindow.history.back();
+                } catch (error) {
+                    console.error("Could not navigate back:", error);
+                    loadingBarContainer.style.display = 'none';
+                    activeFrame.dataset.isLoading = 'false';
+                }
+            }
+        }
+
+        function goForward() {
+            const activeFrame = document.getElementById(`frame-${activeTabId}`);
+            if (activeFrame && activeFrame.contentWindow) {
+                loadingBarContainer.style.display = 'block';
+                activeFrame.dataset.isLoading = 'true';
+                try {
+                    activeFrame.contentWindow.history.forward();
+                } catch (error) {
+                    console.error("Could not navigate forward:", error);
+                    loadingBarContainer.style.display = 'none';
+                    activeFrame.dataset.isLoading = 'false';
+                }
+            }
+        }
+
+        function reloadPage() {
+            const activeFrame = document.getElementById(`frame-${activeTabId}`);
+            if (activeFrame) {
+                loadingBarContainer.style.display = 'block';
+                activeFrame.dataset.isLoading = 'true';
+                activeFrame.src = activeFrame.src;
+            }
+        }
+
+        function handleUrlSubmit(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                let url = urlBar.value.trim();
+
+                if (!url.includes('://') && !url.includes('.') && url !== '/landin') {
+                    url = `/active/Embed.html?url=https://www.google.com/search?q=${encodeURIComponent(url)}`;
+                } else if (!url.includes('://') && url !== '/landin') {
+                    url = `/active/Embed.html?url=https://${url}`;
+                } else if (url !== '/landin') {
+                    url = `/active/Embed.html?url=${encodeURIComponent(url)}`;
+                }
+
+                const activeFrame = document.getElementById(`frame-${activeTabId}`);
+                if (activeFrame) {
+                    loadingBarContainer.style.display = 'block';
+                    activeFrame.dataset.isLoading = 'true';
+                    activeFrame.src = url;
+
+                    const topTab = topTabsBar.querySelector(`.tab[data-tab-id="${activeTabId}"]`);
+                    const sidebarTab = sidebarTabsSection.querySelector(`.tab[data-tab-id="${activeTabId}"]`);
+
+                    if (topTab) topTab.dataset.url = url;
+                    if (sidebarTab) sidebarTab.dataset.url = url;
+
+                    updateUrlBar(url);
+                }
+            }
+        }
+
+        function frameLoaded(tabId) {
+            const frame = document.getElementById(`frame-${tabId}`);
+            if (!frame) return;
+
+            if (frame.dataset.isLoading === 'true') {
+                setTimeout(() => {
+                    loadingBarContainer.style.display = 'none';
+                    frame.dataset.isLoading = 'false';
+                }, 500);
+            }
+
+            try {
+                const topTab = topTabsBar.querySelector(`.tab[data-tab-id="${tabId}"]`);
+                const sidebarTab = sidebarTabsSection.querySelector(`.tab[data-tab-id="${tabId}"]`);
+                const frameUrl = frame.src;
+
+                let pageTitle = 'New Tab';
+                try {
+                    if (frame.contentDocument) {
+                        pageTitle = frame.contentDocument.title || 'New Tab';
+                    }
+                } catch (e) {
+                    console.log('Could not access title due to cross-origin policy');
+                }
+
+                const faviconUrl = frameUrl.startsWith('/landin')
+                    ? ''
+                    : `https://www.google.com/s2/favicons?domain=${extractDomain(frameUrl)}`;
+
+                if (topTab) {
+                    const titleElement = topTab.querySelector('.tab-title');
+                    if (titleElement) titleElement.textContent = pageTitle;
+
+                    if (faviconUrl) {
+                        const iconElement = topTab.querySelector('.tab-icon');
+                        if (iconElement) {
+                            iconElement.innerHTML = `<img src="${faviconUrl}" alt="">`;
+                        }
+                    }
+                }
+
+                if (sidebarTab && faviconUrl) {
+                    sidebarTab.innerHTML = `<img src="${faviconUrl}" alt="" style="width:16px;height:16px;">`;
+                }
+
+                if (parseInt(tabId) === activeTabId) {
+                    updateUrlBar(frameUrl);
+                }
+            } catch (e) {
+                console.error('Error updating tab info:', e);
+            }
+        }
+
+        initializeTabs();
+
+        document.querySelectorAll('.sidebar-icon:not(#settings-btn)').forEach(icon => {
+            icon.addEventListener('click', function() {
+                const url = this.getAttribute('data-url');
+                if (url) {
+                    
+                    const activeFrame = document.getElementById(`frame-${activeTabId}`);
+                    if (activeFrame) {
+                        loadingBarContainer.style.display = 'block';
+                        activeFrame.dataset.isLoading = 'true';
+                        activeFrame.src = url;
+
+                        const topTab = topTabsBar.querySelector(`.tab[data-tab-id="${activeTabId}"]`);
+                        const sidebarTab = sidebarTabsSection.querySelector(`.tab[data-tab-id="${activeTabId}"]`);
+
+                        if (topTab) topTab.dataset.url = url;
+                        if (sidebarTab) sidebarTab.dataset.url = url;
+
+                        if (url.includes('/active/Embed.html?url=')) {
+                            urlBar.value = decodeURIComponent(url.split('/active/Embed.html?url=')[1]);
+                        } else {
+                            urlBar.value = url;
+                        }
+                    }
+                }
+            });
+        });
+
+        newTabBtnTop.addEventListener('click', createNewTab);
+        backBtn.addEventListener('click', goBack);
+        forwardBtn.addEventListener('click', goForward);
+        reloadBtn.addEventListener('click', reloadPage);
+        urlBar.addEventListener('keydown', handleUrlSubmit);
+
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type) {
+                if (event.data.type === 'search') {
+                    const searchUrl = `/active/Embed.html?url=https://www.google.com/search?q=${encodeURIComponent(event.data.query)}`;
+                    const activeFrame = document.getElementById(`frame-${activeTabId}`);
+                    if (activeFrame) {
+                        loadingBarContainer.style.display = 'block';
+                        activeFrame.dataset.isLoading = 'true';
+                        activeFrame.src = searchUrl;
+
+                        const topTab = topTabsBar.querySelector(`.tab[data-tab-id="${activeTabId}"]`);
+                        const sidebarTab = sidebarTabsSection.querySelector(`.tab[data-tab-id="${activeTabId}"]`);
+
+                        if (topTab) topTab.dataset.url = searchUrl;
+                        if (sidebarTab) sidebarTab.dataset.url = searchUrl;
+
+                        urlBar.value = `https://www.google.com/search?q=${encodeURIComponent(event.data.query)}`;
+                    }
+                } else if (event.data.type === 'navigate') {
+                    const url = `/active/Embed.html?url=${encodeURIComponent(event.data.url)}`;
+
+                    const activeFrame = document.getElementById(`frame-${activeTabId}`);
+                    if (activeFrame) {
+                        loadingBarContainer.style.display = 'block';
+                        activeFrame.dataset.isLoading = 'true';
+                        activeFrame.src = url;
+
+                        const topTab = topTabsBar.querySelector(`.tab[data-tab-id="${activeTabId}"]`);
+                        const sidebarTab = sidebarTabsSection.querySelector(`.tab[data-tab-id="${activeTabId}"]`);
+
+                        if (topTab) topTab.dataset.url = url;
+                        if (sidebarTab) sidebarTab.dataset.url = url;
+
+                        urlBar.value = event.data.url;
+                    }
+                }
+            }
+        });
+
+        window.frameLoaded = frameLoaded;
+    </script>
+
+
+</body></html>

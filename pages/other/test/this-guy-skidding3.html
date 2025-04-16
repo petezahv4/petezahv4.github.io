@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <title>Loading</title>
 
     <style>
@@ -9,30 +11,35 @@
             font-style: normal;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
             overflow: hidden;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Inter', Arial, Helvetica, sans-serif;
             height: 100vh;
             width: 100vw;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #d0eaff;
+            background: radial-gradient(circle at center, #001b33 0%, #000814 100%);
+            background-size: 200% 200%;
+            animation: bgShift 20s ease-in-out infinite;
             position: relative;
-            background-color: #001f3f; /* Deep navy blue */
+        }
+
+        @keyframes bgShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         #bg-image {
             display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
         }
 
         #main {
@@ -40,6 +47,7 @@
             flex-direction: column;
             align-items: center;
             z-index: 1;
+            text-align: center;
         }
 
         #icon {
@@ -49,51 +57,39 @@
             color: #7FDBFF;
         }
 
-        p {
-            margin: 0;
-            text-align: center;
-        }
-
-        .starfall {
-            display: none;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-
         #glitch-text {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 700;
-            letter-spacing: 3px;
-            margin-top: 40px;
+            letter-spacing: 4px;
             text-transform: uppercase;
-            animation: none;
             color: #d0eaff;
-            text-shadow: 0 0 5px #00bfff, 0 0 10px #0074D9;
+            margin-top: 30px;
+            text-shadow:
+                0 0 6px #00bfff,
+                0 0 12px #0074D9,
+                0 0 18px #0055aa;
         }
 
         .spinner {
-            width: 180px;
-            height: 180px;
+            width: 140px;
+            height: 140px;
             position: relative;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 12px #00bfff);
         }
 
         .spinner-circle {
-            box-sizing: border-box;
+            position: absolute;
+            border: 8px solid transparent;
+            border-radius: 50%;
+            animation: spin 1.8s linear infinite;
+        }
+
+        .spinner-circle:nth-child(1) {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
-            border: 8px solid transparent;
-            border-top-color: #00bfff; /* Light blue */
-            border-left-color: #00bfff;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            position: absolute;
-            animation: spin 1.5s linear infinite;
+            border-top-color: #00bfff;
+            border-left-color: #0074D9;
         }
 
         .spinner-circle:nth-child(2) {
@@ -101,19 +97,32 @@
             height: 72%;
             top: 14%;
             left: 14%;
-            border-width: 8px;
-            animation-duration: 2s;
+            border-top-color: #003366;
+            border-left-color: #0055aa;
+            animation-duration: 2.5s;
             animation-direction: reverse;
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+        .shadow-layer {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(ellipse at center, rgba(0, 10, 30, 0.6), rgba(0, 0, 0, 0.95));
+            z-index: 0;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+            opacity: 0.08;
+            z-index: 0;
         }
     </style>
 
@@ -121,7 +130,8 @@
 </head>
 
 <body>
-    <img id="bg-image" src="/images/img.png" alt="Background Image">
+    <div class="stars"></div>
+    <div class="shadow-layer"></div>
 
     <div id="loadingbox">
         <div id="main">
@@ -135,8 +145,6 @@
             <p id="glitch-text">LOADING</p>
         </div>
     </div>
-
-    <div class="starfall"></div>
 
     <script>
         const target = document.getElementById('glitch-text');
@@ -163,10 +171,5 @@
             }
         }, 50);
     </script>
-
-    <script src="/static/uv/uv.bundle.js" charset="UTF-8"></script>
-    <script src="/static/uv/uv.config.js" charset="UTF-8"></script>
-    <script src="/static/register-sw.js"></script>
-    <script src="/static/embed.js"></script>
-
-</body></html>
+</body>
+</html>

@@ -387,7 +387,7 @@
         background-color: #5b6e8e;
     }
 
-    /* Battery Icon Styles using Font Awesome */
+    /* Use Font Awesome, cloudflare being annoying af */
     .battery-container {
         display: inline-flex;
         align-items: center;
@@ -491,7 +491,6 @@
         <button class="start-btn" onclick="startGaming()">Start Gaming</button>
     </div>
 
-    <!-- Large Image Container -->
     <div class="large-image-container" onclick="window.location='/iframe.html?url=/storage/ag/g/smashyroad';">
         <img src="/storage/images/main/smashy.jpg" alt="Large Image" class="large-image" id="large-image">
         <div class="large-image-caption" id="large-image-caption">Smashy Road</div>
@@ -538,7 +537,7 @@
         <button id="next-btn" class="arrow">></button>
     </div>
 
-    <!-- Popup Modal -->
+
     <div id="discord-popup" class="popup">
         <div class="popup-content">
             <span id="close-popup" class="close-btn">×</span>
@@ -548,7 +547,7 @@
         </div>
     </div>
 
-    <!-- Info Box -->
+
     <div id="info-box" class="info-box">
         <div class="info-row">
             <span id="battery-display">
@@ -767,10 +766,10 @@
                         const level = battery.level * 100;
                         const percentage = Math.round(level);
                         
-                        // Update percentage text
+
                         batteryPercentage.textContent = `${percentage}%`;
 
-                        // Update battery icon based on percentage
+                        // this took forever
                         batteryIcon.className = 'fas battery-icon'; // Reset classes
                         if (percentage >= 90) {
                             batteryIcon.classList.add('fa-battery-full', 'battery-full');
@@ -788,11 +787,11 @@
                     });
                 } else {
                     batteryPercentage.textContent = 'n/a';
-                    batteryIcon.className = 'fas fa-battery-slash battery-icon'; // Icon for unavailable
+                    batteryIcon.className = 'fas fa-battery-slash battery-icon';
                 }
             }
 
-            // FPS calculation
+            
             function calculateFPS() {
                 frameCount++;
                 const now = performance.now();
@@ -807,14 +806,14 @@
                 requestAnimationFrame(calculateFPS);
             }
 
-            // Initial updates
+            
             updateTime();
             updateBattery();
             requestAnimationFrame(calculateFPS);
 
-            // Regular updates
-            setInterval(updateTime, 60000);   // Update time every minute
-            setInterval(updateBattery, 30000); // Update battery every 30 seconds
+            
+            setInterval(updateTime, 60000);   
+            setInterval(updateBattery, 30000); 
         });
     </script>
     <script src="/storage/js/settings.js"></script>

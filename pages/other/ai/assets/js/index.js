@@ -638,4 +638,4 @@ if (window.speechSynthesis) {
   window.speechSynthesis.onvoiceschanged = () => {};
 }
 
-/* https://discord.usewaves.site */
+/* credits to Waves */

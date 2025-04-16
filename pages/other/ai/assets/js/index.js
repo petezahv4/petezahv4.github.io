@@ -505,7 +505,7 @@ sendMsg.addEventListener("click", () => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": "Bearer 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"
+      "Authorization": "Bearer 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"
     },
     body: JSON.stringify(payload),
     signal: abortController.signal

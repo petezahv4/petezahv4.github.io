@@ -1,0 +1,214 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab | Vplaza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            background-image: url('https://media.discordapp.net/attachments/1353384261771853837/1361473977792467065/opera_gx_dark_frutti_di_mare__1080p__by_finity2002_dgemj0h-fullview.png?ex=67ff8bb3&is=67fe3a33&hm=2924fa8ce96b5a84e21208bd226c8185d8e3bb26b963e3609c4b4a4eab2b3770&=&format=webp&quality=lossless&width=1474&height=829');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 15vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-container {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 90px;
+            position: relative;
+            perspective: 800px;
+        }
+
+        .logo-3d {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateLogo 20s infinite linear;
+        }
+
+        @keyframes rotateLogo {
+            0% {
+                transform: rotateY(0deg) rotateX(10deg);
+            }
+            100% {
+                transform: rotateY(360deg) rotateX(10deg);
+            }
+        }
+
+        .logo-3d::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ff1f5a, #d80641);
+            box-shadow:
+                0 0 20px rgba(255, 31, 90, 0.6),
+                0 0 60px rgba(255, 31, 90, 0.3);
+            z-index: -1;
+        }
+
+        .logo-circle-outer {
+            width: 100%;
+            height: 100%;
+            border: 3px solid #ff0040;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow:
+                inset 0 0 15px rgba(255, 0, 64, 0.4),
+                0 0 15px rgba(255, 0, 64, 0.6);
+            background: linear-gradient(135deg, rgba(20, 10, 40, 0.2), rgba(255, 0, 64, 0.1));
+        }
+
+        .logo-circle-inner {
+            width: 75%;
+            height: 75%;
+            border: 3px solid #ff0040;
+            border-radius: 50%;
+            position: absolute;
+            top: 12%;
+            left: 12%;
+            box-shadow:
+                inset 0 0 10px rgba(255, 0, 64, 0.4),
+                0 0 10px rgba(255, 0, 64, 0.6);
+            background: linear-gradient(135deg, rgba(20, 10, 40, 0.1), rgba(255, 0, 64, 0.05));
+        }
+
+        .search-container {
+            width: 70%;
+            max-width: 650px;
+            position: relative;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 12px 12px 60px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 1px solid #ff0040;
+            border-radius: 8px;
+            color: #ff0040;
+            font-size: 16px;
+            outline: none;
+            font-weight: 300;
+            transition: all 0.3s ease;
+        }
+
+        .search-box:focus {
+            box-shadow: 0 0 10px rgba(255, 0, 64, 0.5);
+        }
+
+        .search-box::placeholder {
+            color: #ff0040;
+            opacity: 0.7;
+            font-weight: 300;
+        }
+
+        .search-icon-container {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff0040;
+            font-size: 18px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo-3d">
+                <div class="logo-circle-outer"></div>
+                <div class="logo-circle-inner"></div>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-icon-container">
+                <i class="bi bi-search"></i>
+            </div>
+            <input type="text" class="search-box" id="searchInput" placeholder="search google or type a url" autofocus="">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('searchInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const query = this.value.trim();
+
+                if (query !== '') {
+                    let targetUrl;
+
+                    // Check if the input is a URL
+                    if (isValidUrl(query)) {
+                        // If it's a URL, use it directly
+                        let url = query;
+                        // Add https:// if not present
+                        if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                            url = 'https://' + url;
+                        }
+                        targetUrl = 'active/embed.html?url=' + encodeURIComponent(url);
+                    } else {
+                        // If it's not a URL, treat it as a search query
+                        targetUrl = 'active/embed.html?url=' +
+                                   encodeURIComponent('https://www.google.com/search?q=' + query);
+                    }
+
+                    window.location.href = targetUrl;
+                }
+            }
+        });
+
+        function isValidUrl(string) {
+            // Simple check for URL pattern
+            const pattern = /^(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
+            return pattern.test(string);
+        }
+    </script>
+
+
+</body></html>

@@ -10,4 +10,4 @@ window.addEventListener('load', function () {
   NProgress.done();
 });
 
-/* https://discord.usewaves.site */
+/* credits to Waves */

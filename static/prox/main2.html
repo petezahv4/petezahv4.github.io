@@ -18,7 +18,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+    font-weight: 400;
 }
 
 body, html {
@@ -26,23 +27,25 @@ body, html {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background: #000000; /* Pure black background */
-    color: #e8eaed;
+    background: #1a2533; /* Dark blue background */
+    color: #ffffff;
 }
 
 .tabs {
     display: flex;
     align-items: center;
-    height: 40px;
-    background: #000000;
+    height: 36px; /* Reduced height for more iframe space */
+    background: #1e2a3c; /* Darker blue for tabs bar */
     padding: 0 8px;
     overflow-x: auto;
     overflow-y: hidden;
     transition: background-color 0.3s ease;
+    border-radius: 12px; /* More rounded edges */
+    margin: 8px;
 }
 
 .tabs:hover {
-    background: #8c00005b; /* Subtle red hover effect */
+    background: #263548; /* Slightly lighter blue on hover */
 }
 
 .tabs::-webkit-scrollbar {
@@ -53,56 +56,61 @@ body, html {
 .tab {
     display: flex;
     align-items: center;
-    height: 36px;
-    padding: 0 10px;
-    margin-right: 3px;
-    color: #aaa;
+    justify-content: space-between; /* Ensures close button is on far right */
+    height: 32px;
+    padding: 0 12px 0 16px;
+    margin-right: 4px;
+    color: #b0b8c4; /* Light gray for inactive tabs */
     cursor: pointer;
-    background: #000000;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    background: #263548; /* Dark blue tab background */
+    border-radius: 10px; /* More rounded edges */
+    transition: all 0.3s ease;
     min-width: 120px;
-    max-width: 200px;
+    max-width: 220px;
     position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
 .tab:hover {
-    background: #1a1a1a;
-    color: #fff;
+    background: #2e3b52;
+    color: #ffffff;
+    transform: translateY(-1px); /* Slight lift on hover */
 }
 
 .tab.active {
-    background: #000000;
-    color: #fff;
+    background: #334261; /* Slightly lighter blue for active tab */
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .tab.active::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0;
+    bottom: 0;
     width: 100%;
-    height: 2px;
-    background: #fa1e4e; /* Vibrant red accent */
-    border-radius: 0 0 4px 4px;
+    height: 3px;
+    background: #000000; /* Black highlight for active tab */
+    border-radius: 4px;
 }
 
 .tab .close-button {
-    margin-left: 8px;
-    width: 16px;
-    height: 16px;
+    margin-left: 10px; /* Ensures spacing from text */
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
-    font-size: 12px;
+    color: #b0b8c4;
+    font-size: 14px;
     border-radius: 50%;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .tab .close-button:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ff0000;
+    background: #000000; /* Black highlight on hover */
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 .add-tab-button {
@@ -111,74 +119,80 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
-    font-size: 14px;
+    color: #b0b8c4;
+    font-size: 16px;
     cursor: pointer;
-    background: #000000;
+    background: #263548;
     border: none;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    border-radius: 10px; /* More rounded edges */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .add-tab-button:hover {
-    color: #fff;
-    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    background: #2e3b52;
+    transform: scale(1.05);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    background: #000000;
-    padding: 8px 16px;
-    height: 52px;
+    background: #1e2a3c;
+    padding: 6px 12px; /* Reduced padding for smaller navbar */
+    height: 44px; /* Reduced height for more iframe space */
     transition: background-color 0.3s ease;
+    border-radius: 12px; /* More rounded edges */
+    margin: 0 8px 8px;
 }
 
 .navbar:hover {
-    background: #8c00005b;
-    border-radius: 10px;
+    background: #263548;
 }
 
 .navbar-left, .navbar-right {
     display: flex;
-    gap: 4px;
+    gap: 6px;
     flex-shrink: 0;
 }
 
 .navbar button {
     width: 28px;
     height: 28px;
-    border-radius: 50%;
+    border-radius: 50%; /* Fully rounded buttons */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
-    background: none;
+    color: #b0b8c4;
+    background: #263548;
     border: none;
     cursor: pointer;
     font-size: 14px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .navbar button:hover {
-    background: rgba(255, 0, 0, 0.1);
-    color: #fff;
+    background: #000000; /* Black highlight */
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 .search-container {
     flex-grow: 1;
     display: flex;
     align-items: center;
-    height: 36px;
-    background: #000000;
-    border-radius: 4px;
-    margin: 0 10px;
+    height: 34px;
+    background: #263548;
+    border-radius: 16px; /* More rounded edges */
+    margin: 0 8px;
     padding: 0 10px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .search-container:hover {
-    background: #8c00005b;
+    background: #2e3b52;
 }
 
 .search-container input {
@@ -187,14 +201,15 @@ body, html {
     background: transparent;
     border: none;
     outline: none;
-    color: #ff0044; /* Bright pink/red for text */
+    color: #ffffff;
     font-size: 14px;
     padding: 0 10px;
+    font-weight: 500;
 }
 
 .search-container input::placeholder {
-    color: #ff0044;
-    opacity: 0.7;
+    color: #b0b8c4;
+    opacity: 0.8;
 }
 
 .search-container button {
@@ -204,23 +219,25 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ff0044;
-    background: none;
+    color: #b0b8c4;
+    background: transparent;
     border: none;
     font-size: 14px;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .search-container button:hover {
-    color: #fff;
-    background: rgba(255, 0, 0, 0.1);
+    color: #ffffff;
+    background: #000000; /* Black highlight */
 }
 
 .content-wrapper {
     flex-grow: 1;
     overflow: hidden;
     position: relative;
-    background: #000000;
+    background: #1a2533;
+    margin: 0 8px 8px;
+    border-radius: 16px; /* More rounded edges */
 }
 
 iframe {
@@ -229,8 +246,9 @@ iframe {
     border: none;
     display: none;
     background: #ffffff;
-    border: 3px solid #ff0077; /* Pink/red border for iframe */
-    border-radius: 10px;
+    border: 4px solid #000000; /* Black highlight border */
+    border-radius: 12px; /* More rounded edges */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 iframe.active {

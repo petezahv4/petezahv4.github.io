@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport Jorge="viewport" content="width=device-width, initial-scale=1.0">
     <title>PeteZah | Proxy</title>
     <link rel="icon" href="storage/images/logo-png-removebg-preview.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -14,181 +13,238 @@
 
     <style>
         <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
-        font-weight: 400;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            font-weight: 400;
+        }
 
-    body, html {
-        height: 100%;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        background-color: #05080f; /* Darker background */
-        color: #d0d0d0;
-    }
+        body, html {
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background: radial-gradient(circle at center, #0a1126, #05080f); /* Cosmic gradient */
+            color: #e0e6ff;
+        }
 
-    .tabs {
-        display: flex;
-        align-items: center;
-        background-color: #121929;
-        padding: 4px 6px;
-        border-bottom: 1px solid #1e2a44;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-        overflow-x: auto;
-    }
+        .tabs {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, #1a263f, #121929);
+            padding: 6px 8px;
+            border-bottom: 1px solid #2a3b66;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            overflow-x: auto;
+        }
 
-    .tab {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 6px 12px 6px 16px;
-        color: #a0b0cc;
-        cursor: pointer;
-        background-color: #121929;
-        border-radius: 8px;
-        margin-right: 4px;
-        transition: all 0.2s ease;
-        max-width: 340px;
-        min-width: 180px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        position: relative;
-        border-bottom: 1px solid #1e2a44;
-    }
+        .tab {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 14px 8px 18px;
+            color: #b0c4ff;
+            cursor: pointer;
+            background: linear-gradient(145deg, #1e2a44, #121929);
+            border-radius: 12px;
+            margin-right: 6px;
+            transition: all 0.3s ease;
+            max-width: 340px;
+            min-width: 180px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 102, 204, 0.3);
+            border: 2px solid transparent;
+            animation: glowPulse 2s infinite alternate;
+        }
 
-    .tab:last-child {
-        border-bottom: none;
-    }
+        @keyframes glowPulse {
+            0% {
+                box-shadow: 0 0 10px rgba(0, 102, 204, 0.3), 0 0 20px rgba(0, 102, 204, 0.2);
+                border-color: rgba(0, 102, 204, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 15px rgba(0, 102, 204, 0.6), 0 0 30px rgba(0, 102, 204, 0.4);
+                border-color: rgba(0, 102, 204, 0.8);
+            }
+        }
 
-    .tab.active {
-        background-color: #1e2a44;
-        color: #ffffff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    }
+        .tab:last-child {
+            border-bottom: none;
+        }
 
-    .tab:hover {
-        background-color: #182133;
-        color: #ffffff;
-    }
+        .tab.active {
+            background: linear-gradient(145deg, #2a3b66, #1e2a44);
+            color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 102, 204, 0.8), inset 0 0 10px rgba(0, 102, 204, 0.4);
+            border-color: rgba(0, 102, 204, 1);
+        }
 
-    .tab .close-button {
-        margin-left: auto;
-        padding-left: 10px;
-        color: #a0b0cc;
-        font-size: 14px;
-        cursor: pointer;
-        transition: color 0.2s ease;
-    }
+        .tab:hover {
+            background: linear-gradient(145deg, #2a3b66, #182133);
+            color: #ffffff;
+            box-shadow: 0 0 25px rgba(0, 102, 204, 0.9);
+        }
 
-    .tab .close-button:hover {
-        color: #ff4444;
-    }
+        .tab .close-button {
+            margin-left: auto;
+            padding-left: 12px;
+            color: #b0c4ff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-    .add-tab-button {
-        padding: 6px 12px;
-        cursor: pointer;
-        background-color: #121929;
-        color: #d0d0d0;
-        border: none;
-        border-radius: 8px;
-        font-size: 18px;
-        transition: all 0.2s ease;
-    }
+        .tab .close-button:hover {
+            color: #ff5555;
+            text-shadow: 0 0 10px rgba(255, 85, 85, 0.8);
+        }
 
-    .add-tab-button:hover {
-        background-color: #182133;
-    }
+        .add-tab-button {
+            padding: 8px 14px;
+            cursor: pointer;
+            background: linear-gradient(145deg, #1e2a44, #121929);
+            color: #e0e6ff;
+            border: none;
+            border-radius: 12px;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 102, 204, 0.3);
+        }
 
-    .navbar {
-        display: flex;
-        align-items: center;
-        background-color: #121929;
-        padding: 4px 10px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Frail white border */
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
-    }
+        .add-tab-button:hover {
+            background: linear-gradient(145deg, #2a3b66, #182133);
+            box-shadow: 0 0 20px rgba(0, 102, 204, 0.7);
+            transform: scale(1.05);
+        }
 
-    .navbar-left, .navbar-right {
-        display: flex;
-        gap: 12px;
-        flex-shrink: 0;
-    }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, #1a263f, #121929);
+            padding: 6px 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
 
-    .navbar button {
-        background: none;
-        border: none;
-        color: #a0b0cc;
-        cursor: pointer;
-        font-size: 14px;
-        transition: color 0.2s ease;
-    }
+        .navbar-left, .navbar-right {
+            display: flex;
+            gap: 14px;
+            flex-shrink: 0;
+        }
 
-    .navbar button:hover {
-        color: #ffffff;
-    }
+        .navbar button {
+            background: none;
+            border: none;
+            color: #b0c4ff;
+            cursor: pointer;
+            font-size: 16px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-    .search-container {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        background-color: #1e2a44;
-        border-radius: 20px;
-        margin: 0 12px;
-        padding: 2px;
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
-    }
+        .navbar button::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: scale(0.8);
+        }
 
-    .search-container input {
-        flex-grow: 1;
-        padding: 6px 10px;
-        border: 1px solid #1e2a44;
-        background: #1e2a44;
-        color: #d0d0d0;
-        font-size: 13px;
-        outline: none;
-        transition: all 0.2s ease;
-        border-radius: 20px;
-    }
+        .navbar button:hover::before {
+            opacity: 1;
+            transform: scale(1);
+        }
 
-    .search-container input:hover {
-        background: #252f4a;
-    }
+        .navbar button:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            transform: scale(1.1);
+        }
 
-    .search-container input:focus {
-        background: #252f4a;
-        outline: none;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-        border-color: #0066cc;
-    }
+        .search-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(145deg, #2a3b66, #1e2a44);
+            border-radius: 24px;
+            margin: 0 14px;
+            padding: 4px;
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 102, 204, 0.3);
+        }
 
-    .search-container button {
-        padding: 6px;
-        color: #a0b0cc;
-    }
+        .search-container input {
+            flex-grow: 1;
+            padding: 8px 12px;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #e0e6ff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
 
-    .content-wrapper {
-        flex-grow: 1;
-        overflow: hidden;
-        position: relative;
-    }
+        .search-container input:hover {
+            background: rgba(37, 47, 74, 0.3);
+        }
 
-    iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        display: none;
-        background-color: #ffffff;
-    }
+        .search-container input:focus {
+            background: rgba(37, 47, 74, 0.5);
+            outline: none;
+            box-shadow: 0 0 20px rgba(0, 102, 204, 0.7);
+            border-color: rgba(0, 102, 204, 0.8);
+        }
 
-    iframe.active {
-        display: block;
-    }
-</style>
+        .search-container button {
+            padding: 8px;
+            color: #b0c4ff;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-container button:hover {
+            color: #ffffff;
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.4), transparent);
+        }
+
+        .content-wrapper {
+            flex-grow: 1;
+            overflow: hidden;
+            position: relative;
+            background: #05080f;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: none;
+            background-color: #ffffff;
+        }
+
+        iframe.active {
+            display: block;
+        }
+    </style>
     </style>
 </head>
 <body>
@@ -219,7 +275,7 @@
     <script>
     let tabCount = 1;
     const proxyPrefix = "/static/embed.html#";
-    let tabHistory = []; // Array to store tab visit history
+    let tabHistory = [];
 
     function selectTab(tabElement) {
         const tabs = document.querySelectorAll('.tab');
@@ -232,10 +288,9 @@
         iframe.classList.add('active');
         updateSearchBar(iframe);
         
-        // Update tab history
         const currentTabIndex = tabIndex;
-        tabHistory = tabHistory.filter(index => index !== currentTabIndex); // Remove if already in history
-        tabHistory.push(currentTabIndex); // Add to end of history
+        tabHistory = tabHistory.filter(index => index !== currentTabIndex);
+        tabHistory.push(currentTabIndex);
     }
 
     function addTab(url = "/static/index.html") {
@@ -262,11 +317,9 @@
         const tabIndex = [...tab.parentElement.children].indexOf(tab);
         const iframe = document.getElementById(`iframe-${tabIndex + 1}`);
         
-        // Remove tab from history
         tabHistory = tabHistory.filter(index => index !== tabIndex);
         
         if (tab.classList.contains('active') && tabCount > 1) {
-            // Select last visited tab from history
             const lastVisitedIndex = tabHistory.length > 0 ? tabHistory[tabHistory.length - 1] : 0;
             const tabs = document.querySelectorAll('.tab');
             const nextTab = tabs[lastVisitedIndex];
@@ -291,6 +344,12 @@
         if (proxifiedUrl.startsWith(proxyPrefix)) {
             return proxifiedUrl.replace(proxyPrefix, "");
         }
+        if (proxifiedUrl === "/static/index.html") {
+            return "petezah://newtab";
+        }
+        if (proxifiedUrl === "/static/prox/settings") {
+            return "petezah://settings";
+        }
         return proxifiedUrl;
     }
 
@@ -300,7 +359,7 @@
         const iframe = document.querySelector('.tab-iframe.active');
         const url = input.startsWith('http') ? input : `https://duckduckgo.com/?q=${encodeURIComponent(input)}`;
         iframe.src = `${proxyPrefix}${url}`;
-        document.getElementById('search-input').value = url;
+        document.getElementById('search-input').value = getUnproxifiedUrl(`${proxyPrefix}${url}`);
         const activeTab = document.querySelector('.tab.active');
         updateTabName(iframe, activeTab);
     }
@@ -308,12 +367,9 @@
     function goHome() {
         const iframe = document.querySelector('.tab-iframe.active');
         iframe.src = "/static/index.html";
-        document.getElementById('search-input').value = "/static/index.html";
+        document.getElementById('search-input').value = "petezah://newtab";
         const activeTab = document.querySelector('.tab.active');
         activeTab.childNodes[0].textContent = "New Tab";
-        setTimeout(() => {
-            document.getElementById('search-input').value = "petezah://newtab";
-        }, 100);
     }
 
     function goBack() {
@@ -334,7 +390,7 @@
     function settings() {
         const iframe = document.querySelector('.tab-iframe.active');
         iframe.src = "/static/prox/settings";
-        document.getElementById('search-input').value = "/static/prox/settings";
+        document.getElementById('search-input').value = "petezah://settings";
         const activeTab = document.querySelector('.tab.active');
         activeTab.childNodes[0].textContent = "Settings";
     }
@@ -357,8 +413,10 @@
         };
     }
 
+    // Initialize search bar on page load
     const initialIframe = document.querySelector('.tab-iframe.active');
     const initialTab = document.querySelector('.tab.active');
+    document.getElementById('search-input').value = "petezah://newtab";
     updateTabName(initialIframe, initialTab);
     </script>
 </body>

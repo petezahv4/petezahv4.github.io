@@ -1,25 +1,25 @@
 :root {
-	--color-bg-primary: #0d0d0d;
-	--color-fg-primary: #969696;
-	--color-accent: #ffffff;
-	--color-button-hover: #c2c2c2;
-	--color-button-disabled: #9e9e9e;
-	--color-hover: #3d3d3d99;
-	--color-ai-button: #929292;
-	--color-ai-button-hover: #797979;
-	--color-focus: #ffffff66;
-	--color-border-light: #ffffff1c;
-	--color-light: #5e5e5e;
-	--color-user-message-bg: #1b1b1b9a;
-	--color-scrollbar: #202020;
-	--color-scrollbar-hover: #3d3d3d;
-	--color-secondary-bg: #1616166b;
-	--color-secondary-hover: #1f1f1f67;
-	--color-suggestions-bg: #1b1b1b6b;
-	--color-bg-alt: #e5e5f7;
-	--color-pattern-dot: #1d1d1d;
-	--color-pattern-bg: #000000;
-	--color-pattern-dot-edge: #ffffff1a;
+	--color-bg-primary: #0a0f1a;
+	--color-fg-primary: #a8b2d1;
+	--color-accent: #b0c4ff;
+	--color-button-hover: #6c8bdc;
+	--color-button-disabled: #3b4966;
+	--color-hover: #1d2b4d99;
+	--color-ai-button: #8093c9;
+	--color-ai-button-hover: #a3b4e4;
+	--color-focus: #b0c4ff66;
+	--color-border-light: #b0c4ff1c;
+	--color-light: #4e5e89;
+	--color-user-message-bg: #101a2f9a;
+	--color-scrollbar: #1a2238;
+	--color-scrollbar-hover: #2a365a;
+	--color-secondary-bg: #121e348f;
+	--color-secondary-hover: #1a2b4d80;
+	--color-suggestions-bg: #17264180;
+	--color-bg-alt: #1a1e33;
+	--color-pattern-dot: #1c2a45;
+	--color-pattern-bg: #050914;
+	--color-pattern-dot-edge: #ffffff10;
 	--font-family-primary: 'Poppins', sans-serif;
 	--font-family-code: 'Courier New', monospace;
 	--dot-size: 1px;
@@ -441,7 +441,7 @@ pre {
 
 .branding img {
 	width: 130px;
-	height: 90px;
+	height: 130px;
 	margin-bottom: 10px;
 }
 
@@ -606,6 +606,59 @@ pre {
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><circle cx="1" cy="1" r="1" fill="white" opacity="0.2" /></svg>') repeat;
+	background-size: var(--dot-space) var(--dot-space);
+	animation: twinkle 4s infinite linear;
+	z-index: 0;
+	pointer-events: none;
+	opacity: 0.3;
+}
+
+@keyframes twinkle {
+	0% { opacity: 0.3; }
+	50% { opacity: 0.5; }
+	100% { opacity: 0.3; }
+}
+
+.chat-header {
+	text-shadow: 0 0 8px var(--color-accent), 0 0 15px var(--color-accent);
+}
+
+.chat-input button,
+.suggestion:hover,
+.selector-selected:hover,
+.selector-options div:hover {
+	box-shadow: 0 0 10px var(--color-accent);
+}
+
+.user-message:hover {
+	box-shadow: 0 0 8px var(--color-light);
+}
+
+.ai-message {
+	box-shadow: 0 0 10px #1a2b4d88;
+}
+
+.branding div {
+	animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+	0%, 100% {
+		text-shadow: 0 0 6px var(--color-accent), 0 0 12px var(--color-accent);
+	}
+	50% {
+		text-shadow: 0 0 12px var(--color-accent), 0 0 20px var(--color-accent);
 	}
 }
 

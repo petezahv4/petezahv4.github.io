@@ -14,7 +14,7 @@ const scramjet = new ScramjetController({
 });
 
 scramjet.init();
-navigator.serviceWorker.register("./static/scramjet/sw.js");
+navigator.serviceWorker.register("/static/scramjet/sw.js");
 
 const connection = new BareMux.BareMuxConnection(
 	"/static/scramjet/baremux/worker.js",
@@ -270,7 +270,7 @@ window.addEventListener("load", async () => {
 
 		return btoa(binary);
 	}
-	const arraybuffer = await (await fetch("/assets/scramjet.png")).arrayBuffer();
+	const arraybuffer = await (await fetch("scramjet.png")).arrayBuffer();
 	console.log(
 		"%cb",
 		`

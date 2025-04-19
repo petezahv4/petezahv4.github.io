@@ -13,7 +13,6 @@
     <meta name="keywords" content="PeteZah Proxy, bypass restrictions, web proxy">
 
     <style>
-        
         * {
             font-family: 'Arial', sans-serif;
             font-weight: 400;
@@ -56,14 +55,29 @@
             text-overflow: ellipsis;
             white-space: nowrap;
             position: relative;
+            font-weight: 400;
         }
 
         .tab.active {
-            background-color: #1e2a44;
+            background: linear-gradient(to bottom, #263552, #1e2a44);
             color: #ffffff;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
-            border-color: #0066cc;
+            font-weight: 600;
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
         }
+
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #1e2a44;
+        }
+
+
+
 
         .tab:hover {
             background-color: #182133;
@@ -1249,4 +1263,5 @@
         }
     </script>
 </body>
+
 </html>

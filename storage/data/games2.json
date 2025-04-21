@@ -110,7 +110,7 @@
     },
     {
       "label": "Resent Client",
-      "url": "/iframe.html?url=/storage/ag/g/ResentCli",
+      "url": "/iframe.html?url=/storage/ag/g/ResentCli/iframe.html",
       "imageUrl": "/storage/images/main/resent.jpeg",
       "categories": ["strategy"]
     },

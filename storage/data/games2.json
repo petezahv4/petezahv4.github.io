@@ -110,7 +110,7 @@
     },
     {
       "label": "Resent Client",
-      "url": "/iframe.html?url=/storage/ag/g/ResentCli",
+      "url": "/iframe.html?url=/storage/ag/g/ResentCli/iframe.html",
       "imageUrl": "/storage/images/main/resent.jpeg",
       "categories": ["strategy"]
     },
@@ -256,6 +256,12 @@
       "label": "Cookie Clicker",
       "url": "/iframe.html?url=/storage/ag/g/cookie-clicker/",
       "imageUrl": "/storage/images/main/cookie.jpeg",
+      "categories": ["skill"]
+    },
+    {
+      "label": "Jelly Drift",
+      "url": "/iframe.html?url=/storage/ag/g/jelly-drift/",
+      "imageUrl": "/storage/images/main/jelly.jpeg",
       "categories": ["skill"]
     },
     {

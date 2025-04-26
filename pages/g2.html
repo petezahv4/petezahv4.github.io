@@ -145,14 +145,21 @@
 
         .image-item {
             position: relative;
-            width: 200px;
-            height: 170px;
+            width: 250px;
+            height: 220px;
             overflow: hidden;
             border-radius: 10px;
             background-color: #222;
             border: 2px solid #fff;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            will-change: transform, box-shadow;
             animation: slideInFromLeft 0.5s ease-out forwards;
+        }
+
+        .image-item:hover {
+            transform: scale(1.05) !important;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
         }
 
         .image-item a {

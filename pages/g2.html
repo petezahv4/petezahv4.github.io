@@ -2,34 +2,42 @@
 <html lang="en">
 
 <head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WPH7NCG4');
+    </script>
+    <!-- End Google Tag Manager -->
 
-    <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WPH7NCG4');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHE360M0YP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
-
         gtag('config', 'G-SHE360M0YP');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6640595376330309"
         crossorigin="anonymous"></script>
 
-
-
     <title>PeteZah | Games</title>
     <link rel="icon" type="icon/x-icon" href="/storage/images/logo-png-removebg-preview.png" />
     <link rel="stylesheet" type="text/css" href="/storage/css/themes2.css">
-
 
     <meta name="description" content="Pete Zah, game on" />
     <meta name="keywords" content="Proxy, Unblocker, Pete Zah Unblocker, Pete Zah Games, Pete Zah" />
@@ -42,18 +50,14 @@
             height: 100vh;
             margin: 0;
             background-color: #0A1D37;
-            /* Dark Blue background */
             color: white;
             font-family: 'Poppins', sans-serif;
             padding: 0;
             overflow: auto;
-            /* Enable scrolling */
         }
 
-        /* Hide scrollbar but allow scrolling */
         body::-webkit-scrollbar {
             display: none;
-            /* Hide scrollbar */
         }
 
         .god-rays {
@@ -85,7 +89,6 @@
             mix-blend-mode: difference;
         }
 
-        /* Fixed Search Bar */
         .search-container {
             position: fixed;
             top: 0;
@@ -95,14 +98,19 @@
             padding: 15px 0;
             text-align: center;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
-            transition: background-color 0.3s; /* Smooth background transition */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s;
+            opacity: 0;
+            transform: translateY(-20px);
         }
 
-        /* Search Bar Input */
+        .search-container.animate {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
         .search-container input {
             font-family: "Poppins", sans-serif;
-            width: 50vw; /* Increased width for better usability */
+            width: 50vw;
             padding: 12px 20px;
             font-size: 18px;
             border: 2px solid #fff;
@@ -116,27 +124,31 @@
         .search-container input:focus {
             background: #333;
             outline: none;
-            box-shadow: 0 0 15px rgba(0, 102, 204, 0.4); /* Updated focus shadow */
-            border-color: #0066cc; /* Light blue focus border */
+            box-shadow: 0 0 15px rgba(0, 102, 204, 0.4);
+            border-color: #0066cc;
         }
 
-        /* Game Container */
         .game-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px; /* Increased gap for better spacing */
-            padding-top: 120px; /* Space for fixed search bar */
-            padding-bottom: 30px; /* Bottom padding for smoother look */
+            gap: 30px;
+            padding-top: 120px;
+            padding-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
-        /* Image Item Styles */
+        .game-container.animate {
+            animation: fadeInUp 1s ease-out 0.3s forwards;
+        }
+
         .image-item {
             position: relative;
-            width: 250px; /* Consistent width */
+            width: 250px;
             height: 220px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-radius: 10px;
             background-color: #222;
             border: 2px solid #fff;
@@ -144,8 +156,8 @@
         }
 
         .image-item:hover {
-            transform: scale(1.05); /* Slight zoom effect */
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
         }
 
         .image-item a {
@@ -162,21 +174,18 @@
             height: 100%;
             object-fit: cover;
             border-radius: 10px;
-            /* Matching rounded corners */
         }
 
         .image-item img:hover {
             transform: scale(1.1);
-            /* Slight zoom effect on image hover */
         }
 
-        /* Label Styles */
         .label {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better contrast */
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             text-align: center;
             padding: 10px;
@@ -184,17 +193,11 @@
             border-bottom-right-radius: 10px;
             font-weight: bold;
             font-size: 16px;
-            transition: background-color 0.3s; /* Smooth transition for label */
+            transition: background-color 0.3s;
         }
 
         .image-item:hover .label {
-            background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
-        }
-
-        /* General Layout & Spacing */
-        .game-container {
-            gap: 30px;
-            /* More space between image items */
+            background-color: rgba(0, 0, 0, 0.9);
         }
 
         .appImage {
@@ -327,9 +330,7 @@
 
         .search-header__input:not(#gointospace2):hover,
         .search-header__input:not(#gointospace2):focus {
-            box-shadow:
-                10px 5px 40px -10px var(--dshadow1),
-                -14px -4px 40px -10px var(--dshadow2);
+            box-shadow: 10px 5px 40px -10px var(--dshadow1), -14px -4px 40px -10px var(--dshadow2);
             padding-left: calc(+50px) !important;
             padding-right: calc(+50px) !important;
         }
@@ -429,6 +430,12 @@
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 16px;
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .randomGameOpensBtn.animate {
+            animation: slideInRight 0.8s ease-out 0.2s forwards;
         }
 
         .randomGameOpensBtn:hover {
@@ -436,7 +443,6 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
         }
 
-        /* Filter Dropdown Styles */
         .filter-container {
             position: fixed;
             top: 5px;
@@ -446,6 +452,12 @@
             padding: 10px;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        .filter-container.animate {
+            animation: slideInRight 0.8s ease-out 0.4s forwards;
         }
 
         .filter-container select {
@@ -470,71 +482,69 @@
             background-color: #000e24;
             z-index: -2;
         }
-        .heart-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 24px;
-            color: red;
-            transition: color 0.3s;
+
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .heart-button:hover {
-            color: white;
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
-        .pinned-container {
-            display: flex;
-            overflow-x: auto;
-            gap: 10px;
-            padding: 10px;
-            background-color: #141414;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            width: 90%;
-            justify-content: left;
-            position: relative;
-            z-index: 100;
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
-        .pinned-item {
-            position: relative;
-            width: 100px;
-            height: 80px;
-            overflow: hidden;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        .pinned-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .pinned-item .remove-pin {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 2px 5px;
-            border-radius: 0 5px 0 0;
-            cursor: pointer;
-            font-size: 14px;
+        @keyframes god-rays {
+            0% {
+                background-position: 50% 50%, 0 0;
+            }
+            100% {
+                background-position: 350% 350%, 0 0;
+            }
         }
     </style>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPH7NCG4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPH7NCG4" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
     <div class="god-rays"></div>
 
     <button class="randomGameOpensBtn" onclick="randomGameOpen()">Random Game</button>
@@ -557,10 +567,7 @@
         </select>
     </div>
 
-    <div class="pinned-container" id="pinnedContainer" style="display: none;"></div>
-
-    <div class="game-container" id="imageContainer">
-    </div>
+    <div class="game-container" id="imageContainer"></div>
 
     <div class="ad-container-horizantal">
         <script async
@@ -576,53 +583,14 @@
 
     <script>
         let games = [];
-        let pinnedGames = JSON.parse(localStorage.getItem('pinnedGames')) || [];
-
-        function updatePinnedDisplay() {
-            const pinnedContainer = document.getElementById('pinnedContainer');
-            pinnedContainer.innerHTML = '';
-
-            if (pinnedGames.length > 0) {
-                pinnedContainer.style.display = 'flex';
-                pinnedGames.forEach(game => {
-                    const pinnedItem = document.createElement('div');
-                    pinnedItem.className = 'pinned-item';
-                    pinnedItem.innerHTML = `
-                        <img src="${game.imageUrl}">
-                        <span class="remove-pin" onclick="removePin('${game.label}')">x</span>
-                    `;
-                    pinnedContainer.appendChild(pinnedItem);
-                });
-            } else {
-                pinnedContainer.style.display = 'none';
-            }
-        }
-
-        function togglePin(game) {
-            const index = pinnedGames.findIndex(pinnedGame => pinnedGame.label === game.label);
-            if (index === -1) {
-                pinnedGames.push(game);
-            } else {
-                pinnedGames.splice(index, 1);
-            }
-            localStorage.setItem('pinnedGames', JSON.stringify(pinnedGames));
-            updatePinnedDisplay();
-        }
-
-        function removePin(label) {
-            pinnedGames = pinnedGames.filter(game => game.label !== label);
-            localStorage.setItem('pinnedGames', JSON.stringify(pinnedGames));
-            updatePinnedDisplay();
-        }
 
         // Fetch games data from JSON file
         async function loadGames() {
             try {
-                const response = await fetch('/storage/data/games.json');
+                const response = await fetch('/storage/data/games2.json');
                 const data = await response.json();
                 games = data.games;
                 displayGames(games);
-                updatePinnedDisplay();
             } catch (error) {
                 console.error('Error loading games:', error);
             }
@@ -646,14 +614,14 @@
                         <img src="${game.imageUrl}">
                         <div class="label">${game.label}</div>
                     </a>
-                    <button class="heart-button" onclick="togglePin(${JSON.stringify(game)})">&#10084;</button>
                 `;
                 container.appendChild(div);
             });
         }
+
         function filterItems() {
             const searchInput = document.getElementById('search-games').value.toLowerCase();
-            const filteredGames = games.filter(game => 
+            const filteredGames = games.filter(game =>
                 game.label.toLowerCase().includes(searchInput)
             );
             displayGames(filteredGames);
@@ -661,7 +629,7 @@
 
         function randomGameOpen() {
             if (games.length > 0) {
-            const randomIndex = Math.floor(Math.random() * games.length);
+                const randomIndex = Math.floor(Math.random() * games.length);
                 const randomGame = games[randomIndex];
                 window.location.href = randomGame.url;
             }
@@ -669,16 +637,25 @@
 
         function filterByCategory() {
             const category = document.getElementById('gameFilter').value.toLowerCase();
-            const filteredGames = category ? 
+            const filteredGames = category ?
                 games.filter(game => game.categories.includes(category)) :
                 games;
             displayGames(filteredGames);
         }
 
-        // Load games when the page loads
+        // Trigger entrance animations
+        function triggerAnimations() {
+            document.querySelector('.search-container').classList.add('animate');
+            document.querySelector('.game-container').classList.add('animate');
+            document.querySelector('.randomGameOpensBtn').classList.add('animate');
+            document.querySelector('.filter-container').classList.add('animate');
+        }
+
+        // Load games and trigger animations when the page loads
         document.addEventListener('DOMContentLoaded', () => {
             loadGames();
-            });
+            triggerAnimations();
+        });
     </script>
     <script src="/storage/js/settings.js"></script>
 </body>

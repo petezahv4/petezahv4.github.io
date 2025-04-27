@@ -473,80 +473,70 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Blob Effect -->
-  <div class="blob-container">
-    <div class="blob"></div>
-    <div class="blobbig"></div>
-    <div class="blobsmall"></div>
-    <div class="blobtop"></div>
-  </div>
+<div class="blob-container">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+</div>
 
-  <!-- Inline CSS for Blob Effect -->
-  <style>
-    .blob-container {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      z-index: -998;
-      width: 300px;
-      height: 300px;
-      overflow: hidden;
-    }
+<!-- Inline CSS for Blob Effect -->
+<style>
+  .blob-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -998;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
 
-    .blob, .blobbig, .blobsmall, .blobtop {
-      position: absolute;
-      background: rgba(0, 128, 255, 0.3); /* Blue with transparency */
-      border-radius: 50%;
-      filter: blur(40px);
-      animation: blobMove 10s ease-in-out infinite;
-    }
+  .blob {
+    position: absolute;
+    background: radial-gradient(circle, rgba(0, 128, 255, 0.2) 0%, rgba(0, 128, 255, 0) 70%);
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: blobMove 12s ease-in-out infinite;
+  }
 
-    .blob {
-      width: 200px;
-      height: 200px;
-      bottom: 50px;
-      left: 50px;
-      opacity: 0.5;
-    }
+  .blob1 {
+    width: 100px;
+    height: 100px;
+    bottom: 30px;
+    left: 20px;
+    opacity: 0.4;
+  }
 
-    .blobbig {
-      width: 250px;
-      height: 250px;
-      bottom: 20px;
-      left: 20px;
-      opacity: 0.4;
-      animation-delay: 2s;
-    }
+  .blob2 {
+    width: 80px;
+    height: 80px;
+    bottom: 50px;
+    left: 60px;
+    opacity: 0.3;
+    animation-delay: 3s;
+  }
 
-    .blobsmall {
-      width: 150px;
-      height: 150px;
-      bottom: 80px;
-      left: 80px;
-      opacity: 0.6;
-      animation-delay: 4s;
-    }
+  .blob3 {
+    width: 90px;
+    height: 90px;
+    bottom: 20px;
+    left: 40px;
+    opacity: 0.35;
+    animation-delay: 6s;
+  }
 
-    .blobtop {
-      width: 180px;
-      height: 180px;
-      bottom: 60px;
-      left: 60px;
-      opacity: 0.5;
-      animation-delay: 6s;
+  @keyframes blobMove {
+    0% {
+      transform: translate(0, 0) scale(1);
     }
-
-    @keyframes blobMove {
-      0% {
-        transform: translate(0, 0) scale(1);
-      }
-      50% {
-        transform: translate(20px, -20px) scale(1.1);
-      }
-      100% {
-        transform: translate(0, 0) scale(1);
-      }
+    50% {
+      transform: translate(15px, -15px) scale(1.05);
     }
-  </style>
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+</style>
     
     <div class="god-rays"></div>
     <div class="welcome-section">

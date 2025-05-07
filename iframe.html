@@ -50,8 +50,8 @@
     background-size: 300%, 200%;
     background-position: 50% 50%, 50% 50%;
     animation: fadeIn 2s ease;
-    mask-image: radial-gradient(ellipse at 100% 0%, rgba(255, 255, 255, 0) 40%, transparent 70%);
     -webkit-mask-image: radial-gradient(ellipse at 100% 0%, white 40%, transparent 70%);
+    mask-image: radial-gradient(ellipse at 100% 0%, rgba(255, 255, 255, 0) 40%, transparent 70%);
     pointer-events: none;
     z-index: -1;
 }
@@ -129,7 +129,7 @@ iframe {
     
     <div class="container-iframe header-text">
         <div class="iframe-container">
-            <iframe sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin allow-downloads" id="myIframe" src=""></iframe>
+            <iframe title="myFrame" sandbox="allow-scripts allow-pointer-lock allow-forms allow-same-origin allow-downloads" id="myIframe" src=""></iframe>
         </div>
         <div class="controls">
             <i style="margin-left: 15px;" class="fas fa-expand icon" onclick="toggleFullscreen()"></i>

@@ -1,3 +1,4 @@
+"use strict";
 /**
  * @type {HTMLFormElement}
  */
@@ -19,17 +20,24 @@ const error = document.getElementById("uv-error");
  */
 const errorCode = document.getElementById("uv-error-code");
 
+// Attach form submit event listener
 form.addEventListener("submit", async (event) => {
-	event.preventDefault();
+  event.preventDefault();
 
-	try {
-		await registerSW();
-	} catch (err) {
-		error.textContent = "Failed to register service worker.";
-		errorCode.textContent = err.toString();
-		throw err;
-	}
+  try {
+    await registerSW();
+  } catch (err) {
+    error.textContent = "Failed to register service worker.";
+    errorCode.textContent = err.toString();
+    throw err;
+  }
 
-	const url = search(address.value, searchEngine.value);
-	location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+  const url = search(address.value, searchEngine.value);
+  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
 });
+
+// Autofill function with auto-submit
+function autofill(url) {
+  address.value = url;
+  form.requestSubmit(); // Automatically submit the form
+}
